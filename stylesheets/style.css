@@ -23,6 +23,10 @@
   padding: 0 18px 18px;
 }
 
+.table_difficulties {
+  height: 750px;
+}
+
 #profile-pic {
     background-position: center;
    /* min-height: 150px;
