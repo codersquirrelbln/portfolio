@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  padding: auto;
+  justify-content: center;
+/*  max-width: 80%;*/
+  padding: 80px;
+  max-width: 600px;
+}
+
+#intro {
+   padding: 20px 0;
+}
+
+.project {
+  padding: 20px 0;
+  /*border: solid grey;*/
+}
+
+.project-container {
+  display: grid;
+
+}
+
+img {
+  height:125px;
+  border-radius: 50%;
+}
+
+.btn-project {
+  background-color: #c8e4d8a6;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #125F60;
+  font-weight: bold;
+}
+
