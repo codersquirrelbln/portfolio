@@ -1,11 +1,44 @@
 .container {
-  display: flex;
+  /*display: flex;*/
   padding: auto;
   justify-content: center;
 /*  max-width: 80%;*/
-  padding: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 300px;
+  padding-right: 300px;
   max-width: 600px;
+  width: 500px;
+  margin: 0 auto;
 }
+
+.card-portfolio {
+  display: flex;
+  margin:20px 0;
+  border-radius: 3px;
+  /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
+}
+
+.card-portfolio-text {
+  padding: 0 18px 18px;
+}
+
+#profile-pic {
+    background-position: center;
+   /* min-height: 150px;
+    width: 50%;*/
+    background-size: cover;
+    height:125px;
+    border-radius: 50%;
+ }
+
+ #elderme-pic, #calculator-pic, #flashcard-pic {
+  background-position: center;
+  min-height: 150px;
+  height: 125px;
+  /*width: 50%;*/
+  background-size: cover;
+ }
 
 #intro {
    padding: 20px 0;
@@ -18,19 +51,20 @@
 
 .project-container {
   display: grid;
-
-}
-
-img {
-  height:125px;
-  border-radius: 50%;
 }
 
 .btn-project {
-  background-color: #c8e4d8a6;
+  background-color: #c8e4d894;
   border-radius: 5px;
   padding: 10px 20px;
   color: #125F60;
   font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-project:hover {
+  background-color: #c0dacf;
+  color: #125F60;
+  text-decoration: none;
 }
 
