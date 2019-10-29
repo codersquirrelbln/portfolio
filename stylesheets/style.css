@@ -9,24 +9,17 @@
   outline: none;
   font-size: 15px;
 }*/
+a {
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
 
 .active, .collapsible:hover {
   background-color: white;
 }
 
-.content, #content-visa {
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 500px;
-  padding-bottom: 50px;
-  display: none;
-  overflow: hidden;
-  background-color: #c8e4d82e;
-  display: block;
-  width: 1500px;
-  text-align: justify;
-  margin-left: -300px;
-}
 
 .container {
   /*display: flex;*/
@@ -42,11 +35,37 @@
   margin: 0 auto;
 }
 
+
+.content {
+  padding-top: 15px;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-bottom: 50px;
+  display: none;
+  overflow: hidden;
+  display: block;
+  width: 1500px;
+  text-align: justify;
+  margin-left: -200px;
+}
+
+
+.card-portfolio-top {
+  display: flex;
+  /*background-color: #c8e4d82e;*/
+  margin: 20px 0;
+  /*border-radius: 5px;*/
+  /*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
+  padding: 10px;
+}
+
 .card-portfolio {
   display: flex;
-  margin:20px 0;
-  border-radius: 3px;
-  /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
+  background-color: #c8e4d82e;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 10px;
 }
 
 .card-portfolio-text {
@@ -73,9 +92,10 @@
 
 #elderme-pic, #calculator-pic, #flashcard-pic {
   background-position: center;
-  min-height: 150px;
-  height: 125px;
-  /*width: 50%;*/
+  padding-top: 5px;
+  /*min-height: 150px;*/
+  /*height: 150px;*/
+  width: 250px;
   background-size: cover;
  }
 
@@ -99,7 +119,15 @@
   display: grid;
 }
 
-.btn-project, .btn-collapsible {
+.list-inline-item li{
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  /*text-align: center;*/
+  padding: 10px;
+}
+
+.btn-project {
   background-color: #c8e4d894;
   border-radius: 5px;
   padding: 10px 20px;
