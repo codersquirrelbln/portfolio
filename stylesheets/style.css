@@ -90,13 +90,20 @@ a:hover{
   height: 20px;
 }
 
-#elderme-pic, #calculator-pic, #flashcard-pic {
+#elderme-pic, #calculator-pic, #flashcard-pic  {
   background-position: center;
   padding-top: 5px;
   /*min-height: 150px;*/
-  /*height: 150px;*/
+  height: 200px;
   width: 250px;
   background-size: cover;
+ }
+
+.coming-soon{
+  /*background-position: center;*/
+  text-align: center;
+  width: 275px;
+  /*background-size: cover;*/
  }
 
 .study-pic {
