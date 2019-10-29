@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
@@ -21,8 +23,16 @@
        <div class="card-portfolio-text">
          <h2>Hi, my name is Elisa, a back-end developer based in Berlin.</h2>
          <p>
-          My first passion was art conservation which was my main focus for the past 15 years. Then programming came along and swept me off my feet. I started with self teaching, then concluded a coding boot camp (@LeWagon) and am now working as a back end developer. Please feel free to look at my current and future projects and reach out to me.
+          My first passion was art conservation which was my main focus for the past 15 years. Then programming came along and swept me off my feet. I started with self teaching, then concluded a coding boot camp <a href="https://www.lewagon.com/" target="_blank"><img src="images/le-wagon-0e68fc00a50ff351516ca01212d2dd940b4b2b89f3dd1ddaa1c83b307cd829eb.png" alt="icon leWagon" id="le-wagon-picture"></a> and am now working as a back end developer. Please feel free to look at my current and future projects and reach out to me.
         </p>
+        <ul class="list-inline">
+        <a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
+        <li>Email: codersquirrelbln@gmail.com</li>
+
+        </ul>
+        </div>
         <div>
           <!-- insert icons -->
         </div>
@@ -40,13 +50,144 @@
 
          <div class="card-portfolio-text">
           <h2>ElderMe</h2>
-          <p>
-           ElderMe is a platform for senior users to find volunteers for activities such as going to the theatre, meeting for a cup of tea or taking a walk in the park. The project was built using Ruby on Rails…
-          </p>
+            <p>
+             ElderMe is a platform for senior users to find volunteers for activities such as going to the theatre, meeting for a cup of tea or taking a walk in the park. The project was built within two weeks in a team of three developers using Ruby on Rails…
+            </p>
           <div class="button">
             <a href="http://www.elderme.live/" target="_blank" class="btn-project">Go to Project</a>
             <a href="https://github.com/codersquirrelbln/elderme" target="_blank" class="btn-project">See Code</a>
-            <a href="casestudy_elderme.html" target="_blank" class="btn-project">Read case study</a>
+            <!-- <a href="casestudy_elderme.html" target="_blank" class="btn-project">Read case study</a> -->
+          <button type="button" class="collapsible btn-collapsible">Read Case Study</button>
+          <div class="content">
+            <div>
+              <h2>Goal</h2>
+              <p>
+                The product should facilitate the interaction and shared activities of elder persons and volunteers.The elder person can choose what activity they are interested in and be shown a selection of volunteers that share that interest. Then they can check out the volunteers profile and send them a meeting request with date and time. The volunteer then can accept or decline the request. If accepted, the meeting will be inserted into the users’ calendar. They can be edited or deleted.
+              </p>
+
+              <p>
+                This project presented an opportunity to build a web application with ruby on rails from scratch, as well as work in a collaboration and collegial environment. As the DRI (designated responsible individual) of the team it tought me to take charge, be responsible and take ownership of things that didn't go as planned.
+              </p>
+            </div>
+
+           <!--  <div>
+              <h2>Approach</h2>
+              <p>
+                The guidelines of this project were specifying that all team members should work on both front and back end. That brought its own difficulties with it. One were of a personal matter, a certain disinterest or disliking or insecurity in one area.
+              </p>
+
+              <p>
+                It did not make too much sense to divide all the different methods in the controllers and corresponding models and views to three different developers, but maybe was a good preparation for later projects and collaborations. Is it how it would be in the real world out there?
+              </p>
+            </div> -->
+
+            <div>
+              <h2>Approach:</h2>
+              <p>
+                <ul>
+                  <li>Setup the rails template, buy a domain name, set up server - Heroku</li>
+                  <li>We drew out the different page views with pen and paper.</li> <!-- add picture? -->
+                  <li>Then we created a new trello project and created the different tasks with specific label colors.</li>
+
+                  <img src="images/trello_overview.png" alt="Screenshot overview Trello project" class="study-pic"><!-- add screenshot -->
+                  <li>We had different columns:
+                    Overview: Held all the main groups of tasks, for example the groupings of MVC, model, view and controller, Styling, pop-ups. These cards will not be moved but stay to be consulted and updated, checking off the individual tasks that are in the checklist, that correspond with additional cards
+                    To Do, Started, Review, Done. Every individual card corresponds with a feature branch (ideally named the same or similar)
+                    In all other columns the cards hold individual tasks that are summed up in the overview cards. They can be assigned individually and get moved from To Do to started to the review (meaning they are finished and pushed to gitHub and are in the process of being reviewed by all other team members). Once the changes are reviewed and approved by everyone, the feature branch holding the changes, will be merged into the master branch, everyone pulls the updated master branch and continue working. The card can be finally moved to the DONE column.
+                   All individual cards must have the same color label as the overview cards. Use labels for colourblind to be more inclusive
+                  </li>
+                </ul>
+              </p>
+            </div>
+
+            <div>
+              <h2>Difficulties and Solutions</h2>
+
+              <p>
+                Difficulties | Solutions
+                ------------ | -------------
+
+                finding team dynamic | Accept and respect team members as individuals. Include everyone in decision process and set up guidelines together.
+                Conflicts about different levels of interest, investment |  Focus on yourself and your work, but also not losing right of team members, continuously involving team members in process and status updates. Ultimately accept that everyone has individual priorities. Nevertheless ask team members respectfully to contribute the parts they were assigned to and insist in them following the guidelines set up together before starting to code
+                Git, accidentally working on the master branch instead of creating a new feature branch | Making a Guidline with the different steps, for the first few days look continuously at list and follow step by step, regularity delete feature branches that are not needed anymore
+                Keeping an overview of the complex structure provided by the ruby on rails | FileIcons Plugin, closing folders as soon as they are not needed anymore, making sure the models and controllers and views follow naming conventions
+                Reading team members code | Make sure, all the naming conventions are followed and indentions are correct. User comments as much as needed so that someone new to team can easily catch up.
+              </p>
+              <!-- <p>
+                <img src="images/table_difficulties.png" alt="Table of difficulties" id="table_difficulties">
+              </p> -->
+            </div>
+
+        <!--     <div>
+              <h2>Collaboration</h2>
+            </div> -->
+
+
+            <div>
+              <h2>Lessons learned</h2>
+              <ul>
+                <li>
+                  Working in teams is hard. When working on a project by yourself, you are the one with all the strings in hand. You decide in which direction the product will move, what to add, what the MVP should include, how fast to move. In a team, you have to come to a consensus. You have to slow down situations to now jump the gun but follow the order of things.
+                </li>
+
+                <li>
+                  Start the day with having a new look at where we are at and what needs to be achieved for that work day and divide up the different tasks to the team members, will help immensely.
+                </li>
+
+                <li>
+                  Have a list of tasks easily accessible to all team members at all times. The team members for their part need inform on what their current task is and continuously update their progress. This way, everyone is always up to date, can check in with their colleagues to see if they need help with a task (or the team member can add another colleague to a task to let them know they need support), others can know which task is still open or if it makes sense to start a task if the task directly previous, that needs to be done before it can continue down that line. Others can see if it makes sense to pick up a task that depends on another task to be completed. It is also motivating and keeps up morale to see how we as a team are advancing, that the progress we make, does advance the product.
+                </li>
+
+                <li>
+                  Communication. Probably the biggest part of working in a team, that needs to be the top priority above all else. If there is no (good and productive) communication, there won’t be a (good) product that users will use. And does a product that has no users even exist? The tree that falls when no one is around, doesn’t make a sound. Even working at one work station does not mean there will be automatic communication. Using tools like slack also help having a record that you can refer to when things get hectic. When communicating with each other, be kind to one another, respectful, try to see where the other person is coming from. Give constructive criticism, say why you prefer one solution over the other so that the other person can understand here YOU are coming from.
+                </li>
+
+                <li>
+                  Sometimes it is a good idea to involve an uninvolved person in resolving conflicts. A mediator.
+                </li>
+
+                <li>
+                  You need to be on the top of your game. When multiple people work in the same documents, even when they are on different tasks in different parts of the code, it can get confusing. Not jumping to the next task without consulting the task list and its assignees is fundamental.
+                </li>
+
+                <li>
+                  Someone has to be in charge. Even in a team as small as three, someone has to take the lead and keep an eye on things so the overview is safe and up to date. The person in charge doesn’t have to be the same every day, but one has to be the go to person.
+                </li>
+
+                <li>
+                  Every day you learn an increased amount. Give yourself breaks. There is no sense in pushing and pushing until exhaustion.
+                </li>
+
+                <li>
+                  Different people will care different amounts about the product. In result they will invest different amounts of energy, time and emotion into it. You have to be ok with that and keep true to what you want to invest.
+                </li>
+
+                <li>
+                  Focus on yourself and your tasks but don’t loose sight of what the rest of the team are up to.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2>Open issues</h2>
+              <p>
+                <ul>
+                  <li>Add an OAuth to sign in with gmail or facebook</li>
+                  <li>Add a feature that shows volunteers with same interest within certain radius.</li>
+                  <li>Add feature to upload a profile picture and a video</li>
+                  <li>Add a feature of subtitles on video.</li>
+                  <li>Make the webpage more accessible. Try a screenreader and know what it still needs.</li>
+                </ul>
+              </p>
+            </div>
+
+            <h3>Thanks</h3>
+            <p>This was a team effort, I could not have done it without <a href="https://github.com/Holdenro" target="_blank">Ronan Recune</a> - design/front end, and <a href="https://github.com/M-algbawi" target="_blank">Monther Al Gbawi</a> - front end. It has been a pleasure to work with you!</p>
+
+            <button type="button" class="collapsible btn-collapsible" id="minimize">Read Case Study <strong>v</strong></button>
+            <!-- <button class="collapsible btn-collapsible" type="button">Close</button> -->
+          </div>
+
           </div>
 
          </div>
@@ -72,7 +213,49 @@
 
                 <a href="https://github.com/codersquirrelbln/visa_calculator" target="_blank" class="btn-project">See Code</a>
                      <!-- Link to Git Hub repo -->
-                <a href="#" target="_blank" class="btn-project">Read case study</a>
+                <button type="button" class="collapsible btn-collapsible" id="collapsible-visa">Read Case Study</button>
+                <div id="content-visa">
+
+                  <h3>Approach</h3>
+                  <p>
+                    This Visa Calculator was created for travellers, that want to calculate one or more stays in a country within a certain time frame.
+                  </p>
+                  <p>
+                    The user can insert individual travel limitations set by different countries and will get information about how many days they can still use up or how many days they would have to remove from their travels to be within the visa regulations.
+                  </p>
+
+                  <h3>Motivation</h3>
+                  <p>
+                    Since I like travelling and my s.o. and I work remotely, we have to be aware of visa regulations of the countries we visit for expanded times. We were calculating dates manually and rechecked continuously, so we would comply with the law.
+                  </p>
+                  <p>
+                    Additionally to its personal practicality, this project gave me the chance to expand my knowledge and experience working with JavaScript. As a backend developer it is important to understand front end complexities and limitations as well as your own area of expertise. This ultimately improves the collaboration in teams of backend and frontend developers.
+                  </p>
+
+                  <h3>Features</h3>
+                  <ul>
+                  <li>Enter country's visa regulations (maximum days in certain time frame, for example: Schengen Zone - 90 out of 180 days).</li>
+                  <li>Enter first date of entry.</li>
+                  <li>The user will be informed when the time frame ends - until when can I plan my 90 days.</li>
+                  <li>Multiple trips are calculateable.</li>
+                  <li>Previously picked dates are blocked to avoid overlap.</li>
+                  <li>Dates after the end of the time frame are blocked for correct results.</li>
+                  <li>Trips can be deleted.</li>
+                  <li>The amount of days are calculated, once the submit button is hit.</li>
+                    <ul>
+                      <li>It informs on how many days are still open to fill the maximum days or how many days need to be removed to be within regulations.</li>
+                       <li>It informs the user when the time frame ends.</li>
+                    </ul>
+                  </ul>
+
+
+                  <h3>Thanks</h3>
+                  <p>I had my wonderful colleague <a href="https://github.com/Holdenro" target="_blank">Ronan Recune</a> design the front end for me, thank you for that!
+
+
+
+                </div>
+                <!-- <a href="#" target="_blank" class="btn-project">Read case study</a> -->
 
               </div>
             </div>
@@ -118,7 +301,62 @@
 
     </div>
   </div>
+ <script src="javascript/main.js"></script>
 
 
 </body>
 </html>
+
+
+<!--
+ <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+          <h2 class="small">Great eaters</h2>
+          <img src="images/s_2.jpeg" alt="beautiful squirrel eating a nut" width="200" class="img rounded-circle">
+          <p>
+            Squirrels are <strong>very great</strong> eaters! They love nuts and fruits and all sorts of veggies, but not brussel sprouts, they hate brussel sprouts!
+          </p>
+        </div>
+
+
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <h2 class="small">Curiosity</h2>
+          <img src="images/curious.jpg" alt="Curious Squirrel" width="250" class="img rounded-circle">
+          <p>Squirrels are <strong>very</strong> curious animals, they will be tempted to get to know all foods, other animals and learn different languages!</p>
+      </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <h2 class="small">Good moms</h2>
+          <img src="images/s_1.jpeg" alt="Squirrel Mom with kids" width="250" class="img rounded-circle">
+          <p>Squirrel moms take <em>great</em> care of their babies. They are stricts but fair</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <h2 class="small">Geselligkeit</h2>
+          <img src="images/s_4.jpeg" alt="Squirrels" width="250" class="img rounded-circle">
+          <p>They love to hang around with their friends to gossip and discuss today´s political topics</p>
+        </div>
+
+      </div>
+   </div>
+
+
+</body>
+<footer>
+  <div id="footer">
+    <p>
+      "I am a footer"
+    </p>
+
+  <ul class="list-inline">
+
+  <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-youtube"></i> </a></li>
+  <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-instagram"></i> </a></li>
+  <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
+
+  </ul>
+  </div>
+
+</footer> -->

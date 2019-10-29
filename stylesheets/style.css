@@ -1,3 +1,33 @@
+/*.collapsible {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}*/
+
+.active, .collapsible:hover {
+  background-color: white;
+}
+
+.content, #content-visa {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 500px;
+  padding-bottom: 50px;
+  display: none;
+  overflow: hidden;
+  background-color: #c8e4d82e;
+  display: block;
+  width: 1500px;
+  text-align: justify;
+  margin-left: -300px;
+}
+
 .container {
   /*display: flex;*/
   padding: auto;
@@ -21,12 +51,13 @@
 
 .card-portfolio-text {
   padding: 0 18px 18px;
-}
 
+}
+/*
 .table_difficulties {
   height: 750px;
 }
-
+*/
 #profile-pic {
     background-position: center;
    /* min-height: 150px;
@@ -36,13 +67,24 @@
     border-radius: 50%;
  }
 
- #elderme-pic, #calculator-pic, #flashcard-pic {
+#le-wagon-picture {
+  height: 20px;
+}
+
+#elderme-pic, #calculator-pic, #flashcard-pic {
   background-position: center;
   min-height: 150px;
   height: 125px;
   /*width: 50%;*/
   background-size: cover;
  }
+
+.study-pic {
+  height: 150px;
+}
+.study-pic:hover {
+  height:300px;
+}
 
 #intro {
    padding: 20px 0;
@@ -57,13 +99,14 @@
   display: grid;
 }
 
-.btn-project {
+.btn-project, .btn-collapsible {
   background-color: #c8e4d894;
   border-radius: 5px;
   padding: 10px 20px;
   color: #125F60;
   font-weight: bold;
   text-decoration: none;
+  border: none;
 }
 
 .btn-project:hover {
@@ -71,4 +114,37 @@
   color: #125F60;
   text-decoration: none;
 }
+
+.btn-collapsible:hover {
+  background-color: #c0dacf;
+  color: #125F60;
+  text-decoration: none;
+}
+
+/*
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+*/
 
