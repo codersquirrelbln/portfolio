@@ -39,6 +39,11 @@ a:hover{
   text-decoration: none;
 }*/
 
+.contact {
+  text-decoration: underline;
+  color: black;
+}
+
 .active, .collapsible:hover {
   background-color: white;
 }
@@ -80,6 +85,8 @@ a:hover{
   /*border-radius: 5px;*/
   /*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
   padding: 10px;
+  display: flex;
+
 }
 
 .card-portfolio {
@@ -140,6 +147,10 @@ a:hover{
    padding: 20px 0;
 }
 
+.contact {
+
+}
+
 .project {
   padding: 20px 0;
   /*border: solid grey;*/
@@ -149,12 +160,35 @@ a:hover{
   display: grid;
 }
 
-.list-inline-item li{
+.list-inline-item li {
+  font-size: 50px;
   display: flex;
   justify-content: space-around;
   text-decoration: none;
   /*text-align: center;*/
   padding: 10px;
+}
+
+.fab:before {
+    content: "\f09b";
+    font-size: 50px;
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-linked-in {
+  color: blue;
+}
+
+.fa-gitlab {
+  color: orange;
+}
+
+.fab:hover {
+  /*font-size: 70px;*/
+  color: #125F60;
 }
 
 .btn-project {

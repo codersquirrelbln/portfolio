@@ -3,7 +3,7 @@ let coll = document.getElementsByClassName("collapsible");
 // let minimize = document.querySelector('#minimze');
 let i;
 
-
+console.log(coll);
 for (i = 0; i < coll.length; i++) {
   console.log('hello');
   coll[i].addEventListener("click", function() {
