@@ -151,7 +151,7 @@ h2 {
   border: none;
 }
 
-.btn:hover {
+.btn-project:hover {
   background-color: #c0dacf;
   color: #125F60;
   text-decoration: none;
