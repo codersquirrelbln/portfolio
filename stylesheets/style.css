@@ -1,22 +1,9 @@
-.collapsible {
-  background-color: white;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.contact {
-  text-decoration: none;
-  background-color: none;
-}
-
-.title{
+.title {
   padding-bottom: 15px;
+}
+
+h2 {
+  padding-top: 15px;
 }
 
 .trello img {
@@ -24,31 +11,19 @@
 }
 
 .card-case-study {
-  /*display: flex;*/
-  /*background-color: #c8e4d82e;*/
   margin: 20px 0;
-  /*border-radius: 5px;*/
-  /*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
   padding: 10px;
 }
 
-/*a {
-  text-decoration: none;
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-a:hover{
-  text-decoration: none;
-}*/
-
-.active, .collapsible:hover {
-  background-color: white;
-}
-
 
 .container {
-  /*display: flex;*/
   padding: auto;
   justify-content: center;
-/*  max-width: 80%;*/
   padding-top: 80px;
   padding-bottom: 80px;
   padding-left: 300px;
@@ -58,52 +33,31 @@ a:hover{
   margin: 0 auto;
 }
 
-
 .content {
   padding-top: 15px;
-  padding-left: 250px;
-  padding-right: 250px;
-  padding-bottom: 50px;
-  display: none;
-  overflow: hidden;
-  display: block;
-  width: 1500px;
-  text-align: justify;
-  margin-left: -200px;
 }
-
 
 .card-portfolio-top {
   display: flex;
-  /*background-color: #c8e4d82e;*/
   margin: 20px 0;
-  /*border-radius: 5px;*/
-  /*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
   padding: 10px;
 }
 
 .card-portfolio {
   display: flex;
-  background-color: #c8e4d82e;
+  /*background-color: #c8e4d82e;*/
   margin: 20px 0;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 10px;
 }
 
 .card-portfolio-text {
   padding: 0 18px 18px;
+}
 
-}
-/*
-.table_difficulties {
-  height: 750px;
-}
-*/
 #profile-pic {
     background-position: center;
-   /* min-height: 150px;
-    width: 50%;*/
     background-size: cover;
     height:125px;
     border-radius: 50%;
@@ -113,50 +67,75 @@ a:hover{
   height: 20px;
 }
 
-#elderme-pic, #calculator-pic, #flashcard-pic  {
+#elderme-pic, #calculator-pic, #flashcard-pic {
   background-position: center;
   padding-top: 5px;
-  /*min-height: 150px;*/
   height: 200px;
   width: 250px;
   background-size: cover;
  }
 
-.coming-soon{
-  /*background-position: center;*/
+.coming-soon {
   text-align: center;
   width: 275px;
-  /*background-size: cover;*/
  }
 
 .study-pic {
   height: 150px;
 }
+
 .study-pic:hover {
   height:300px;
 }
 
 #intro {
-   padding: 20px 0;
+  padding: 20px 0;
 }
 
 .project {
   padding: 20px 0;
-  /*border: solid grey;*/
 }
 
 .project-container {
   display: grid;
 }
 
-.list-inline-item li{
+/*contact icons*/
+.list-inline-item li {
+  font-size: 50px;
   display: flex;
   justify-content: space-around;
   text-decoration: none;
-  /*text-align: center;*/
   padding: 10px;
 }
 
+.hover:before {
+  content: "\f09b";
+  font-size: 50px;
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-linked-in {
+  color: blue;
+}
+
+.fa-gitlab {
+  color: orange;
+}
+
+.fa-envelope {
+  color: red;
+  font-size: 50px;
+}
+
+.hover:hover {
+  color: #125F60;
+}
+
+/*buttons*/
 .btn-project {
   background-color: #c8e4d894;
   border-radius: 5px;
@@ -167,42 +146,10 @@ a:hover{
   border: none;
 }
 
-.btn-project:hover {
+.btn:hover {
   background-color: #c0dacf;
   color: #125F60;
   text-decoration: none;
 }
 
-.btn-collapsible:hover {
-  background-color: #c0dacf;
-  color: #125F60;
-  text-decoration: none;
-}
-
-/*
-.footer-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: white;
-   text-align: center;
-}
-*/
 
