@@ -6,10 +6,7 @@ h2 {
   padding-top: 15px;
 }
 
-.trello img {
-  height: 100px;
-}
-
+/*cards*/
 .card-case-study {
   margin: 20px 0;
   padding: 10px;
@@ -24,14 +21,11 @@ h2 {
 .casestudy-directory {
   display: flex;
   justify-content: space-around;
-  /*align-items: center;*/
   list-style-type: none;
-  /*padding: 10px;*/
   font-size: 15px;
 }
 
 .container {
-  /*padding: auto;*/
   justify-content: center;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -50,7 +44,6 @@ h2 {
 
 .card-portfolio {
   display: flex;
-  /*background-color: #c8e4d82e;*/
   margin: 20px 0;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -59,6 +52,11 @@ h2 {
 
 .card-portfolio-text {
   padding: 0 18px 18px;
+}
+
+/*images*/
+.trello img {
+  height: 100px;
 }
 
 #profile-pic {
@@ -80,11 +78,6 @@ h2 {
   background-size: cover;
  }
 
-.coming-soon {
-  text-align: center;
-  width: 275px;
- }
-
 .study-pic {
   height: 150px;
 }
@@ -92,6 +85,17 @@ h2 {
 .study-pic:hover {
   height:300px;
 }
+
+.roadmap {
+  height: 150px;
+}
+
+
+/**/
+.coming-soon {
+  text-align: center;
+  width: 275px;
+ }
 
 #intro {
   padding: 20px 0;
@@ -104,6 +108,7 @@ h2 {
 .project-container {
   display: grid;
 }
+
 
 /*contact icons*/
 .list-inline-item li {
@@ -140,6 +145,7 @@ h2 {
   color: #125F60;
 }
 
+
 /*buttons*/
 .btn-project {
   background-color: #c8e4d894;
@@ -151,10 +157,9 @@ h2 {
   border: none;
 }
 
-.btn:hover {
+.btn-project:hover {
   background-color: #c0dacf;
   color: #125F60;
   text-decoration: none;
 }
-
 
