@@ -5,9 +5,13 @@
   <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <!-- class="col-sm-12 col-md-4 col-lg-12" -->
@@ -15,32 +19,47 @@
   <div class="container">
     <div class="card-portfolio-top">
       <div class="product-pic" id="intro">
-        <!--  <div id="intro" class="product-pic"> -->
         <img src="images/elisa_profile_pic.jpg" alt="Picture of Elisa" id="profile-pic">
       </div>
 
       <div class="card-portfolio-text">
         <h2>Hi, I am Elisa, a back end developer and art conservator based in Berlin.</h2>
-
         <p>
           While running my own restoration workshop, I started to teach myself coding.
           After the <a href="https://www.lewagon.com/" target="_blank"><img src="images/le-wagon-0e68fc00a50ff351516ca01212d2dd940b4b2b89f3dd1ddaa1c83b307cd829eb.png" alt="icon leWagon" id="le-wagon-picture"></a>-boot camp, I now work as a back end developer with focus on Ruby on Rails, excited by learning something new every day.
           In my free time, you can find me taking extended walks in the forest with the family dog (or if I find the motivation, jogging), solving jigsaw puzzles or Sudoku, reading a crime novel or learning a new language on Duolingo - currently Italian.
+        </p>
+        <p>
           Please feel free to look at my current and future projects.
         </p>
-        <button type="button" class="btn contact collapsible"><a href="#">Contact me</a>.</button>
-        <div class="content">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
-            <li>Email: codersquirrelbln@gmail.com</li>
-          </ul>
+        <button type="button" class="btn-project" data-toggle="modal" data-target="#exampleModal">
+          Contact Me
+        </button>
+      </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Contact Information</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github hover"></i></a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin hover"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-gitlab hover"></i></a></li>
+                <li class="list-inline-item"><a href="codersquirrelbln@gmail.com" target="_blank"><i class="fas fa-envelope hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="content">
+    <div class="container content">
       <div class="card-portfolio">
         <div class="product-pic">
          <img src="images/eldermeLandingpageScreenshot.png" alt="Screenshot of the ElderMe app" id="elderme-pic">
@@ -73,7 +92,7 @@
           <div class="button">
             <a href="https://codersquirrelbln.github.io/visa_calculator/" target="_blank" class="btn-project">Go to Project</a>
             <a href="https://github.com/codersquirrelbln/visa_calculator" target="_blank" class="btn-project">See Code</a>
-            <!-- button type="button" class="collapsible btn-collapsible" id="collapsible-visa">Read Case Study</button> -->
+            <!-- button type="button" class="collapsible btn-project-collapsible" id="collapsible-visa">Read Case Study</button> -->
             <a href="casestudy_calculator.html" class="btn-project">Read case study</a>
           </div>
         </div>
@@ -82,10 +101,6 @@
       <div class="card-portfolio">
         <div class="product-pic">
           <p class="coming-soon"><em>Coming soon</em></p>
-          <!-- Photo by William Iven on Unsplash -->
-          <!-- <img src="images/william-iven-gcsNOsPEXfs-unsplash.jpg" alt="Placeholder picture work in progress" id="flashcard-pic"> -->
-          <!-- <img src="images/jessy-smith-McPfYQCpYfw-unsplash.jpg" alt="Placeholder picture work in progress" id="flashcard-pic"> -->
-          <!-- Photo by Jessy Smith on Unsplash -->
         </div>
 
         <div class="card-portfolio-text">
@@ -100,51 +115,10 @@
             <a href="casestudy_flashcards.html" class="btn-project">Read case study</a>
           </div>
         </div>
+      </div>
     </div>
   </div>
 
   <script src="javascript/main.js"></script>
 </body>
 </html>
-
-
-<!--
- <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
-          <h2 class="small">Great eaters</h2>
-          <img src="images/s_2.jpeg" alt="beautiful squirrel eating a nut" width="200" class="img rounded-circle">
-          <p>
-            Squirrels are <strong>very great</strong> eaters! They love nuts and fruits and all sorts of veggies, but not brussel sprouts, they hate brussel sprouts!
-          </p>
-        </div>
-
-
-
-        <div class="col-12 col-sm-6 col-md-4">
-          <h2 class="small">Curiosity</h2>
-          <img src="images/curious.jpg" alt="Curious Squirrel" width="250" class="img rounded-circle">
-          <p>Squirrels are <strong>very</strong> curious animals, they will be tempted to get to know all foods, other animals and learn different languages!</p>
-      </div>
-
-        <div class="col-12 col-sm-6 col-md-4">
-          <h2 class="small">Good moms</h2>
-          <img src="images/s_1.jpeg" alt="Squirrel Mom with kids" width="250" class="img rounded-circle">
-          <p>Squirrel moms take <em>great</em> care of their babies. They are stricts but fair</p>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4">
-          <h2 class="small">Geselligkeit</h2>
-          <img src="images/s_4.jpeg" alt="Squirrels" width="250" class="img rounded-circle">
-          <p>They love to hang around with their friends to gossip and discuss today´s political topics</p>
-        </div>
-
-      </div>
-   </div>
-
-
-</body>
-<footer>
-
-
-</footer> -->
