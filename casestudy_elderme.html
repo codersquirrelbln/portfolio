@@ -28,68 +28,48 @@
       <div class="card-case-study">
         <h3>Approach</h3>
         <p>
-          The guidelines of this project were specifying that all team members will work on both the front and back end. That brought its own difficulties with it. One were of a personal matter, a certain disinterest or disliking or insecurity in one area.
-        </p>
-
-        <p>
-          It did not make too much sense to divide all the different methods in the controllers and corresponding models and views to three different developers, but maybe was a good preparation for later projects and collaborations. Is it how it would be in the real world out there?
+          The guidelines of this project were specifying that all team members will work on both the front and back end. That brought its own difficulties with it - a certain disinterest, disliking or insecurity in one of the areas. We tried to divide the work up equally, but preferences showed early on that it made more sense to let each team member focus on what they wanted to be their area of expertise.
         </p>
       </div>
 
       <div class="card-case-study">
         <h3>First steps:</h3>
-        <p>
-         <ul>
-           <li>Setup the rails template, buy a domain name, set up server - Heroku</li>
-           <li>We drew out the different page views with pen and paper.</li> <!-- add picture? -->
-           <li>Then we created a new trello project and created the different tasks with specific label colors.</li>
+        <div class="container">
+          <div class="card-portfolio">
+            <div class="roadmap">
+              <img src="images/20190825_123939_copy_2copy.jpg" alt="Drawn out Roadmap of backend code" class="roadmap">
+            </div>
+            <div class="card-portfolio-text">
+              <ul>
+                <li>
+                  First we needed to setup the rails template, create a repository on GitHub, buy a domain name, and set up a host - in this case Heroku.
+                </li>
+                <li>
+                  Although we sat at the same group of tables, we had our own slack channel to have a record of our progress, keep every member informed and not interrupt them in their work flow.
+                </li>
+                <li>
+                  To keep a project overview, we drew out a map of the different page views and their correlation with pen and paper. This step was repeated every morning, so it would be up to date and we would know which parts of the project were finished and which task(s) to assign to which team member.
+                </li>
+                <li>
+                  We complemented the map with a Trello project online to track all tasks, their assigned developer, and their progress. The tasks sections were grouped together by color labels.
+                  The Overview column held all the main groups of tasks, for example the groupings of MVC - model, view and controller - styling, pop-ups and others. These cards were never moved, to be consulted and updated, ticking off the individual tasks located in the checklist. According to these checklists, each item was placed on an individual task card with the same color label and a developer assigned to it. Task cards were accompanied by a feature branch - ideally named the same or similar - and moved to the column correspondent to their progress: To Do, Started, Review, and Done. A card that reached the Review column, had been pushed to GitHub and a pull request had been issued. The assigned developer sent out a notification to the team on slack, so the two others could review the code in the pull request, make suggestions or request changes. One of the two would then merge the feature branch and all members could pull the updated master branch onto their local repositories.
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <div>
             <ul class="trello">
-             <img src="images/trello_overview.png" alt="Screenshot overview Trello project" class="study-pic">
-             <img src="images/users_overview.png" alt="detail of trello - card of overview task">
-             <img src="images/users_overview_33percent.png" alt="detail of trello - card of partially finished task">
-             <img src="images/users_overview_100percent.png" alt="detail of trello - card of finished task">
-             </ul>
-           </div>
-           <li>
-
-            We had different columns:
-             Overview: Held all the main groups of tasks, for example the groupings of MVC, model, view and controller, Styling, pop-ups. These cards will not be moved but stay to be consulted and updated, checking off the individual tasks that are in the checklist, that correspond with additional cards
-             To Do, Started, Review, Done. Every individual card corresponds with a feature branch (ideally named the same or similar)
-             In all other columns the cards hold individual tasks that are summed up in the overview cards. They can be assigned individually and get moved from To Do to started to the review (meaning they are finished and pushed to gitHub and are in the process of being reviewed by all other team members). Once the changes are reviewed and approved by everyone, the feature branch holding the changes, will be merged into the master branch, everyone pulls the updated master branch and continue working. The card can be finally moved to the DONE column.
-            All individual cards must have the same color label as the overview cards. Use labels for colourblind to be more inclusive
-           </li>
-         </ul>
-        </p>
+              <img src="images/elderme_trello_board.png" alt="Screenshot overview Trello project" class="study-pic">
+              <img src="images/elderme_users_0percent.png" alt="detail of trello - card of overview task">
+              <img src="images/elderme_users_33percent.png" alt="detail of trello - card of partially finished task">
+              <img src="images/elderme_users_100percent.png" alt="detail of trello - card of finished task">
+            </ul>
+          </div>
+        </div>
       </div>
-
-
 
       <div class="card-case-study">
-        <h3>Difficulties and Solutions</h3>
-
-        <p>
-          Difficulties | Solutions
-          ------------ | -------------
-
-          finding team dynamic | Accept and respect team members as individuals. Include everyone in decision process and set up guidelines together.
-          Conflicts about different levels of interest, investment |  Focus on yourself and your work, but also not losing right of team members, continuously involving team members in process and status updates. Ultimately accept that everyone has individual priorities. Nevertheless ask team members respectfully to contribute the parts they were assigned to and insist in them following the guidelines set up together before starting to code
-          Git, accidentally working on the master branch instead of creating a new feature branch | Making a Guidline with the different steps, for the first few days look continuously at list and follow step by step, regularity delete feature branches that are not needed anymore
-          Keeping an overview of the complex structure provided by the ruby on rails | FileIcons Plugin, closing folders as soon as they are not needed anymore, making sure the models and controllers and views follow naming conventions
-          Reading team members code | Make sure, all the naming conventions are followed and indentions are correct. User comments as much as needed so that someone new to team can easily catch up.
-        </p>
-        <!-- <p>
-          <img src="images/table_difficulties.png" alt="Table of difficulties" id="table_difficulties">
-        </p> -->
-      </div>
-
-  <!--     <div>
-        <h3>Collaboration</h3>
-      </div> -->
-
-
-     <div class="card-case-study">
         <h3>Lessons learned</h3>
         <ul>
           <li>
