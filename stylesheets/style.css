@@ -21,8 +21,17 @@ h2 {
   align-items: center;
 }
 
+.casestudy-directory {
+  display: flex;
+  justify-content: space-around;
+  /*align-items: center;*/
+  list-style-type: none;
+  /*padding: 10px;*/
+  font-size: 15px;
+}
+
 .container {
-  padding: auto;
+  /*padding: auto;*/
   justify-content: center;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -31,10 +40,6 @@ h2 {
   max-width: 600px;
   width: 500px;
   margin: 0 auto;
-}
-
-.content {
-  padding-top: 15px;
 }
 
 .card-portfolio-top {
