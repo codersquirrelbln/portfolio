@@ -5,7 +5,11 @@
   <title>Casestudy Elderme</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container collapsible">
@@ -139,7 +143,29 @@
       <ul class="casestudy-directory">
         <li><a href="casestudy_flashcards.html">Read previous case study</a></li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="">Contact Me</a></li>
+        <li>
+         <a href="" data-toggle="modal" data-target="#exampleModal">Contact Me</a>
+         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Contact Information</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body">
+                 <ul class="list-inline">
+                   <li class="list-inline-item"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github hover"></i></a></li>
+                   <li class="list-inline-item"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin hover"></i></a></li>
+                   <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-gitlab hover"></i></a></li>
+                   <li class="list-inline-item"><a href="codersquirrelbln@gmail.com" target="_blank"><i class="fas fa-envelope hover"></i></a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+        </li>
         <li><a href="casestudy_calculator.html">Read next case study</a></li>
       </ul>
   </div>
