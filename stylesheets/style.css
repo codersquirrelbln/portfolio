@@ -128,7 +128,6 @@ h2 {
 }
 
 .list-inline-item:hover {
-  font-size: 45px;
   opacity: 100%;
 }
 
@@ -150,7 +149,7 @@ h2 {
 
 .contact {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /*buttons*/
@@ -170,3 +169,15 @@ h2 {
   text-decoration: none;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  /*text-align: center !important;*/
+}
+
+.icon-footer {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
