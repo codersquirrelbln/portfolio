@@ -1,10 +1,46 @@
-.container {
-  /*display: flex;*/
-  padding: auto;
+.title {
+  padding-bottom: 15px;
+}
+
+h2 {
+  padding-top: 15px;
+}
+
+.link {
+  color: #125F60;
+}
+
+.button {
+  padding-top: 10px;
+}
+
+/*cards*/
+.card-case-study {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.modal-body {
+  display: flex;
   justify-content: center;
-/*  max-width: 80%;*/
-  padding-top: 80px;
-  padding-bottom: 80px;
+  align-items: center;
+}
+
+.casestudy-directory {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+  /*color: #125F60;*/
+}
+
+.container {
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 40px;
   padding-left: 300px;
   padding-right: 300px;
   max-width: 600px;
@@ -12,47 +48,123 @@
   margin: 0 auto;
 }
 
+.card-portfolio-top {
+  display: flex;
+  margin: 20px 0;
+  padding: 10px;
+}
+
 .card-portfolio {
   display: flex;
-  margin:20px 0;
-  border-radius: 3px;
-  /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 10px;
 }
 
 .card-portfolio-text {
   padding: 0 18px 18px;
 }
 
+/*images*/
+.trello img {
+  height: 100px;
+}
+
 #profile-pic {
     background-position: center;
-   /* min-height: 150px;
-    width: 50%;*/
     background-size: cover;
     height:125px;
     border-radius: 50%;
  }
 
- #elderme-pic, #calculator-pic, #flashcard-pic {
+#le-wagon-picture {
+  height: 20px;
+  opacity: 40%;
+}
+
+#le-wagon-picture:hover {
+  opacity: 100%;
+}
+
+
+#elderme-pic, #calculator-pic, #flashcard-pic {
   background-position: center;
-  min-height: 150px;
-  height: 125px;
-  /*width: 50%;*/
+  padding-top: 5px;
+  height: 200px;
+  width: 250px;
   background-size: cover;
  }
 
+.study-pic {
+  height: 150px;
+}
+
+.study-pic:hover {
+  height:300px;
+}
+
+.roadmap {
+  height: 150px;
+}
+
+
+/**/
+.coming-soon {
+  text-align: center;
+  width: 275px;
+ }
+
 #intro {
-   padding: 20px 0;
+  padding: 20px 0;
 }
 
 .project {
   padding: 20px 0;
-  /*border: solid grey;*/
 }
 
 .project-container {
   display: grid;
 }
 
+
+/*contact icons*/
+.list-inline-item {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 25px;
+  content: "\f09b";
+  opacity: 30%;
+}
+
+.list-inline-item:hover {
+  opacity: 100%;
+}
+
+.fa-github{
+  color: black;
+}
+
+.fa-linked-in {
+  color: blue;
+}
+
+.fa-gitlab {
+  color: orange;
+}
+
+.fa-envelope {
+  color: red;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+/*buttons*/
 .btn-project {
   background-color: #c8e4d894;
   border-radius: 5px;
@@ -60,6 +172,7 @@
   color: #125F60;
   font-weight: bold;
   text-decoration: none;
+  border: none;
 }
 
 
@@ -69,3 +182,15 @@
   text-decoration: none;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  /*text-align: center !important;*/
+}
+
+.icon-footer {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
