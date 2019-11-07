@@ -74,7 +74,13 @@ h2 {
 
 #le-wagon-picture {
   height: 20px;
+  opacity: 40%;
 }
+
+#le-wagon-picture:hover {
+  opacity: 100%;
+}
+
 
 #elderme-pic, #calculator-pic, #flashcard-pic {
   background-position: center;
