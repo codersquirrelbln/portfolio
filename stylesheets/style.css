@@ -6,6 +6,10 @@ h2 {
   padding-top: 15px;
 }
 
+.button {
+  padding-top: 10px;
+}
+
 /*cards*/
 .card-case-study {
   margin: 20px 0;
