@@ -54,26 +54,43 @@
 
     <div>
       <h4>Thanks</h4>
-      <p>I had my wonderful colleague <a href="https://github.com/Holdenro" target="_blank">Ronan Recune</a> design the front end for me, thank you for that!</p>
+      <p>I had my wonderful colleague <a href="https://github.com/Holdenro" class="link" target="_blank">Ronan Recune</a> design the front end for me, thank you for that!</p>
     </div>
 
    <div>
-      <ul class="casestudy-directory">
-        <li><a href="casestudy_elderme.html">Previous case study</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="casestudy_flashcards.html">Next case study</a></li>
-      </ul>
-  </div>
+    <ul class="casestudy-directory">
+      <li><a href="casestudy_elderme.html" class="link">Previous case study</a></li>
+      <li><a href="index.html" class="link">Home</a></li>
+      <li><a href="casestudy_flashcards.html" class="link">Next case study</a></li>
+    </ul>
+   </div>
 
-  <div class="contact">
-    <p>
+<footer>
+    <div class="contact">
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github hover"></i></a></li>
-        <li class="list-inline-item"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin hover"></i></a></li>
-        <li class="list-inline-item"><a href="#" target="_blank"> <i class="fab fa-gitlab hover"></i></a></li>
-        <li class="list-inline-item"><a href="codersquirrelbln@gmail.com" target="_blank"><i class="fas fa-envelope hover"></i></a></li>
+        <li class="list-inline-item footer">&copy 2019, Elisa Burghard</li>
+        <li class="list-inline-item icon-footer"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github footer icon-footer "></i></a></li>
+        <li class="list-inline-item footer icon-footer"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin footer icon-footer"></i></a></li>
+        <li class="list-inline-item footer icon-footer"><a href="#" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
+       <li class="list-inline-item"><a href="" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-envelope"></i></a></li>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact me via Email</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <input type="text" value="codersquirrelbln@gmail.com" id="my-input">
+                <button onclick="copyEmail()">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </ul>
-    </p>
-  </div>
+    </div>
+</footer>
 </body>
 </html>
