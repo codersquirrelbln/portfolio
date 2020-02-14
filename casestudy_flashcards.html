@@ -18,9 +18,95 @@
     <h2>Case study Flashcards</h2>
     <p><em>This project is still in working progress and will be updated with the newest advances soon...</em></p>
 
-    <p>last updated: January 1st, 2020</p>
-    <p>...first of all...</p>
-    <h4>Happy New Year!</h4>
+  <p>last updated: February 14th, 2020</p>
+  <h4>What I learned</h4>
+  <!-- <ul style="list-style-type:none"> -->
+  <ul>
+    <li>
+      <h6>Implementing an API to fetch pictures from Unsplash</h6>
+      Inside this, limiting the amount of pictures displayed with the option to show more results.
+      The amount of learning you can achieve by only one “little" feature is immense and very satisfying.
+      I had been working on this feature to use unsplash as a resource for pictures for a day, watching tutorials, reading medium articles and stack overflow threads. It would just not come together. Before it got to a level of frustration that makes it hard to get back from, I took a break, went for a run, had something to eat and listened to my audiobook for 5 minutes while my mind was already heading back to coding. And low and behold, I read one more medium article, and all of a sudden it did work! All of the stress and insecurities and frustration just went away and were forgotten about and I moved on to the next feature - after staging my stages to git of course!
+    </li>
+    <br>
+    <li>
+      <h6>Picture upload from your device</h6>
+    </li>
+    <br>
+    <li>
+      <h6>Always have your server logs open when coding</h6>
+      When creating a new card, the user can pick more than one deck in which the card should be placed. However this did not work. After studying the server logs in real time for a few tries, and using tools such as Postman and the useful <code>console.log(something I want to know, such as data)</code>, it turned out that the data set that was passed along to the database had a slightly different syntax than expected. Namely the array of deck-ids were not found within the card parameters.
+      <pre>
+        <code>
+         Parameters: {“word"=>"nuevo", "translation"=>"new", "picture"=>"", "hint"=>"", "flipped"=>false, "deck_ids"=>[12, 11], "card"=>{"word"=>"nuevo", "translation"=>"new", "picture"=>"", "hint"=>"", "flipped"=>false}}
+        </code>
+      </pre>
+      It turns out that I had to change the axios syntax in the store very slightly from
+      <code>return axios.post('/cards', card)</code>
+      to
+      <code>return axios.post('/cards', {card: card})</code>.
+      <pre>
+        <code>
+           Parameters: {“card"=>{"word"=>"el maestro", “translation"=>"the teacher", "picture"=>"", "hint"=>"", "flipped"=>false, "deck_ids"=>[12, 11]}}
+        </code>
+      </pre>
+      <p>
+        Credit for finding and fixing the error goes to <a href="https://www.dimitribosch.com/" target="blank" class="link">Dimi</a>. Some things just come with experience, I would not have found the solution to that online, and it is still unclear, why only deck-ids was placed outside of the card parameters.
+      </p>
+    </li>
+    <br>
+    <li>
+      <h6>Create a document to monitor my work flow and productivity</h6>
+      <img src="images/Screenshot 2020-02-14 at 13.29.07.png" alt="spreadsheet of task overview" class="tasks" >
+
+      <img src="images/Screenshot 2020-02-14 at 13.29.40.png" alt="spreadsheet of weekly overview" class="tasks">
+      <ul>
+        <li>
+          All tasks go into a spreadsheet, with an ID and overview when I started and finished the task
+        </li>
+        <li>
+          A week to week overview with the tasks I want to tackle: a list above and then assigning them to each day, dividing it into “Caculation" and “Realtime"
+        </li>
+      </ul>
+      Besides managing my time better and not drop the ball on anything, it also helps to see how long tasks actually take. This will in turn make planning for new or similar tasks and projects more realistic.
+    </li>
+    <br>
+    <li>
+      <h6>Issue Tracker</h6>
+      Stephanie and I started using GitLab’s issues to track discussions and document our decision making process and results. We are only a team of two at the moment, but for future projects we want to collaborate and work in larger teams, that will most likely work in an asynchronous manner.
+      <ul>
+        <li>
+          By opening issues and linking/assigning the members that should be involved in the decision making process and/or will be affected by the results, everyone is up to date on the status, can ask questions to clarify points, and contribute to the final results, independently from other team members making time to bring them up to speed.
+        </li>
+        <li>
+          The Issue opener can serve as a moderator for the issue or assign someone else to take charge.
+        </li>
+        <li>
+          Nothing gets dropped, the issues can serve as a to do list, it is easily visible if issue still needs resolving or are closed.
+        </li>
+        <li>
+          Issues document when decisions were made, why, how and by whom. Others can reread the documentation in an efficient way, instead of having to set up a chat with coworkers - who might work in different time zones or don’t have room in their schedule in a timely manner.
+        </li>
+        <li>
+          All discussions are linked to the project, all essential information is gathered in one place and available for other collaborators or new team members. They don't have to give them access to googledDocs or sending phone protocols back and forth.
+        </li>
+        <li>
+          There are other options such as Milestone or Due Date, that we will still have to include in the issues.
+        </li>
+      </ul>
+    </li>
+    <br>
+    <li>
+      <h6>Starting an Error Log</h6>
+      I started a file to record the errors I encounter along the way, plus the solution. This way with a reoccurring error I know where to check first, because contrary to my own believe, I will surely remember next time how I solves this” is not always true. unfortunately;
+
+      Especially helpful when start using a new programming language or framework, and you are still not familiar with all the errors.
+    </li>
+
+  </ul>
+    <!-- <p>last updated: January 1st, 2020</p> -->
+    <!-- <p>...first of all...</p> -->
+    <!-- <h4>Happy New Year!</h4> -->
     <p>
       Stephanie and I made great progress the last few weeks and getting closer to the final design of the application.
     </p>
@@ -31,7 +117,7 @@
 
     <br>
     <p>...</p>
-    <p>last updated: November 25th, 2019</p>
+    <!-- <p>last updated: November 25th, 2019</p> -->
     <div>
       <h3>Goal</h3>
       <ul>
