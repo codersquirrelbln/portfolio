@@ -22,6 +22,9 @@ h2 {
   height: 200px;
 }
 
+#reading-header {
+  padding-left: 15px;
+}
 
 .link {
   color: #125F60;
