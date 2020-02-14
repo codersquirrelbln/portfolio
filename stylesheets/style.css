@@ -18,8 +18,14 @@ h2 {
   padding-bottom: 10px:
 }
 
+/*Pictures*/
 #schema {
   height: 200px;
+}
+
+.tasks {
+  height: 200px;
+  margin: 5px 20px;
 }
 
 #reading-header {
