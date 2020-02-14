@@ -28,6 +28,10 @@ h2 {
   margin: 5px 20px;
 }
 
+#reading-header {
+  padding-left: 15px;
+}
+
 .link {
   color: #125F60;
 }
