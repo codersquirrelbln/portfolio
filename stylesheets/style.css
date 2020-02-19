@@ -59,6 +59,11 @@
   /*cursor:pointer;*/
 }
 
+.tasks {
+  height: 200px;
+  margin: 5px 20px;
+}
+
 .casestudy-directory {
   display: flex;
   justify-content: space-around;
@@ -128,6 +133,10 @@
 
 #le-wagon-picture:hover {
   opacity: 100%;
+}
+
+#schema {
+  height: 200px;
 }
 
 
