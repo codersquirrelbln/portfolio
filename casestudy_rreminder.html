@@ -26,11 +26,10 @@
           <li>Set up an account with email and password</li>
           <li>Create reminders with a title, description and a specific day of the month and time, which will be sent via email monthly</li>
           <li>Delete reminders individually</li>
-          <li>
-            Implement tests
-          </li>
         </ul>
-      </li>
+        <p>
+          Implement tests
+        </p>
         <h5>Approach</h5>
         <h6>First steps</h6>
           <p>
@@ -39,20 +38,27 @@
         </li>
         <h6>TDD</h6>
         <p>
-         TDD has always sounded interesting to me and I thought it would be helpful, but I had no idea, how much easier and more efficient it would make my programming. Not only does it force you to be clear about the user journey, validations and associations of the models before starting to write the rest of the code, but it also serves as a guideline, a checklist. Getting used to a new topic takes time, and it is hard sometimes to make time, especially when you set a deadline. But it is worth it. I had an incredible time improving my skills with testing. I especially liked using capybara and FactoryBot to go through one user journey at a time. Tests lead you where the code needs to go, the minimalistic approach makes the best of your time and resources, keeping the code clean, clear and light. I didn’t include tests for controllers or views, as they are partially included in the feature and model tests and we can trust rails and devise to do their job.
+         TDD does not only force you to be clear about the user journey, validations and associations of the models before starting to write the rest of the code, but it also serves as a guideline, a checklist. I had an incredible time improving my skills with testing. I especially liked using <a href="https://github.com/teamcapybara/capybara" target="_blank" class="link">capybara</a> and <a href="https://github.com/thoughtbot/factory_bot" target="_blank" class="link">FactoryBot</a> to go through one user journey at a time. Tests lead you where the code needs to go, the minimalistic approach makes the best of your time and resources, keeping the code clean, clear and light. I didn’t include tests for controllers or views, as they are partially included in the feature and model tests and we can trust rails and devise to do their job.
         </p>
         <h6>Obstacles</h6>
         <p>
-          At the beginning, I was uncertain how many helpers and gems I should use. I want to show off, that I understand and am familiar with the basics. However, coding is about trade offs and code needs to be shipped, sometimes better sooner than later. I had started writing tests for the user and reminder models and consequently generated the models, when I decided that my main focus should not be to create the login/out logic, but more on the actual reminder functionality and email sending. So I changed to using the devise gem to help me out and make my life easier. In retrospect that should have been the approach from the beginning, as I saw it causing problems now. Creating a new user model with devise caused conflicts with the already existing model. I did not have anything in my database, so I decided to drop it in order to delete the first model table to enable a new migration. It is not best practice to delete migration files, and in retrospect it would have been better to drop the tables in newly generated migrations.
+          At the beginning, I was uncertain how many helpers and gems I should use. I want to show off, that I understand and am familiar with the basics. However, coding is about trade offs and code needs to be shipped, sometimes better sooner than later. I had started writing tests for the user and reminder models and consequently generated the models, when I decided that my main focus should not be to create the login/out logic, but more on the actual reminder functionality and email sending. So I changed to using the <a href="https://github.com/heartcombo/devise" target="_blank" class="link">devise gem</a> to help me out and make my life easier. In retrospect that should have been the approach from the beginning, as I saw it causing problems now. Creating a new user model with devise caused conflicts with the already existing model. I did not have anything in my database, so I decided to drop it in order to delete the first model table to enable a new migration. It is not best practice to delete migration files, and in retrospect it would have been better to drop the tables in newly generated migrations.
         </p>
         <h6>Creating a Reminder</h6>
         <p>
-          The task mentioned that the user can create a reminder, for example on the first, second, third day of every month. First I thought about a drop down menu with specific options, but that was too limiting. Having used the flatpickr as a date picker before, I decided to use it again.  I had created two different columns in the reminder table, date and time, but later decided to merge them into one. In consequence I had to change the reminders#new and home views, as well as reminderModel and tests. This time I did follow the best practice and used migration files to accomplish the schema changes.
+          The task mentioned that the user can create a reminder, for example on the first, second, third day of every month. First I thought about a drop down menu with specific options, but that was too limiting. Having used <a href="https://flatpickr.js.org/" target="_blank" class="link">flatpickr</a> as a date picker before, I decided to use it again.  I had created two different columns in the reminder table, date and time, but later decided to merge them into one. In consequence I had to change the reminders#new and home views, as well as reminderModel and tests. This time I did follow the best practice and used migration files to accomplish the schema changes.
         </p>
         <h6>Sending Emails</h6>
         <p>
-          For sending actual emails, I used MailGun, which a developer recommended. Figuring out the whenever gem took some time. I started by creating an automated function, deleting a reminder with a specific title, every two minutes. When that worked, I started sending a welcome email. However, this interfered with my specs for user, reminder and signup, because MailerGun only allows you to use the sandbox for testing purposes. For this reason, it is now commented out.
+          For sending actual emails, I used <a href="https://www.mailgun.com/" target="_blank" class="link">MailGun</a>, which a developer recommended. Figuring out the <a href="https://github.com/javan/whenever" target="_blank" class="link">whenever gem</a> took some time. I started by creating an automated function, deleting a reminder with a specific title, every two minutes. When that worked, I started sending a welcome email. However, this interfered with my specs for user, reminder and signup, because MailerGun only allows you to use the sandbox for testing purposes. For this reason, it is now commented out.
           Then I focused on sending email reminders and calling it every minute in schedule.rb: I defined the date and time of today and now as well as the length of this month. The last variable was important, because if a user creates a reminder on the 31st of a month, the reminder would be skipped every month that doesn’t have 31 days. To avoid that, I created an if-statement, assigning the reminder_day to the month_length (an integer), if the month had less days than the reminder date.
+          <pre>
+            <code>
+              if today_month_length < reminder_date
+                reminder_date = today_month_length
+              end
+            </code>
+          </pre>
           In the next if-statement, the dates and times of the reminder and today were compared and if they were the same, the email would be sent.
         </p>
       <h6>Next Steps</h6>
