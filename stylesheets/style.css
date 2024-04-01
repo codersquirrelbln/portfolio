@@ -1,5 +1,12 @@
 .title {
   padding-bottom: 15px;
+  padding-top: 2em;
+}
+
+a {
+  color: #125F60 !important;
+  cursor:pointer;
+  text-decoration: underline;
 }
 
 .responsive-container {
@@ -8,7 +15,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 50px auto;
 }
 
 @media screen and (max-width: 1000px) {
@@ -54,6 +60,11 @@
   background-color: #c0dacf;
   color: #125F60;
   text-decoration: none;
+}
+
+.button-project a {
+  margin: 0 10px;
+  display: inline-block;
 }
 
 .tasks {
@@ -129,11 +140,6 @@
   width: 350px;
   background-size: cover;
  }
-
- .link {
-  color: #125F60;
-  cursor:pointer;
-}
 
 .image-size {
   width: 100%;
