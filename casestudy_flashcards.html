@@ -2,147 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casestudy Flashcards</title>
+  <title>FlashBack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <div class="container">
-    <h2 class="mt-4 title">Case study Flashcards</h2>
-    <p><em>This project is still in working progress and will be updated with the newest advances soon...</em></p>
-  <h5 class="mt-4">What I am learning right now</h5>
-  <ul>
-    <li>
-      <h6>Working with a CI Pipeline on GitLab</h6>
-    </li>
-    <li>
-      <h6>Implementing feature to play through a deck of cards</h6>
-    </li>
-  </ul>
-  <br>
+  <div class="custom-container">
+    <h2 class="text-2xl font-bold mt-4 mb-4">FlashBack</h2>
+    <h5 class="mt-4">Goal</h5>
+    <ul>
+      <li>
+        Build a fully functional web application for vocabulary training, that enables the user to
+        <ul>
+          <li>Set up an account, signing in with facebook, google or email</li>
+          <li>Create individual cards, fill in the word, translation and upload a picture from a folder or through a googlesearch</li>
+          <li>Group cards in decks</li>
+          <li>Go through decks and fill out cards, then get the result (right or wrong) and be shown the right answer</li>
+          <li>See their progress through a deck</li>
+          <li>Reset a deck and start again</li>
+        </ul>
+      </li>
+      <li>
+        Learn to work in a collaborative and asynchronous fashion in a team of UX Designer and Software Engineer.
+      </li>
+    </ul>
 
-  <h5>What I learned</h5>
-  <ul>
-    <li>
-      <h6>Vue.js, RoR as an API, and TDD</h6>
-      <p>
-        After doing a deep dive into Vue.js (and absolutely loving it!) and learning more about using Ruby on Rails as an API, I started a completely new repository, leaving the first version of the flashcard app behind, that I started building using only RoR. This gave me a chance to rethink the application more and apply all the newly acquired knowledge.
-      </p>
-      <p>
-        I am thrilled about how the project is coming along and learning so much along the way. I want to put an emphasis on the territory of TDD, which I didn't know a lot about and was somehow a little intimidating by. However, learning from a colleague <a href="https://www.youtube.com/channel/UC9bsDBNvCZEEjrjFdFLtIYAand" target="_blank" class="link">Juan Vqz</a> and his tutorial on <a href="https://www.youtube.com/playlist?list=PL4yLj0azo9NU-qUCvSUZSm92gdxFJAWRc" target="_blank" class="link"> Vue and RoR </a> that all changed rapidly, and I am all aboard, seeing how much easier it makes life in the long run. So thank you for that, Juan!
-      </p>
-    </li>
-    <br>
-    <li>
-      <h6>Implementing an API to fetch pictures from Unsplash</h6>
-      Inside this, limiting the amount of pictures displayed with the option to show more results.
-      The amount of learning you can achieve by only one “little" feature is immense and very satisfying.
-      I had been working on this feature to use unsplash as a resource for pictures for a day, watching tutorials, reading medium articles and stack overflow threads. It would just not come together. Before it got to a level of frustration that makes it hard to get back from, I took a break, went for a run, had something to eat and listened to my audiobook for 5 minutes while my mind was already heading back to coding. And low and behold, I read one more medium article, and all of a sudden it did work! All of the stress and insecurities and frustration just went away and were forgotten about and I moved on to the next feature - after staging my stages to git of course!
-    </li>
-    <br>
-    <li>
-      <h6>Picture upload from your device</h6>
-    </li>
-    <br>
-    <li>
-      <h6>Always have your server logs open when coding</h6>
-      When creating a new card, the user can pick more than one deck in which the card should be placed. However this did not work. After studying the server logs in real time for a few tries, and using tools such as Postman and the useful <code>console.log(something I want to know, such as data)</code>, it turned out that the data set that was passed along to the database had a slightly different syntax than expected. Namely the array of deck-ids were not found within the card parameters.
-      <pre>
-        <code>
-         Parameters: {“word"=>"nuevo", "translation"=>"new", "picture"=>"", "hint"=>"", "flipped"=>false, "deck_ids"=>[12, 11], "card"=>{"word"=>"nuevo", "translation"=>"new", "picture"=>"", "hint"=>"", "flipped"=>false}}
-        </code>
-      </pre>
-      <p>It turns out that I had to change the axios syntax in the store very slightly from</p>
-      <code>return axios.post('/cards', card)</code>
-      <p class="mt-2">to</p>
-      <code>return axios.post('/cards', {card: card})</code>.
-      <pre>
-        <code>
-           Parameters: {“card"=>{"word"=>"el maestro", “translation"=>"the teacher", "picture"=>"", "hint"=>"", "flipped"=>false, "deck_ids"=>[12, 11]}}
-        </code>
-      </pre>
-      <p>
-        Credit for finding and fixing the error goes to <a href="https://www.dimitribosch.com/" target="blank" class="link">Dimi</a>. Some things just come with experience, I would not have found the solution to that online, and it is still unclear, why only deck-ids was placed outside of the card parameters.
-      </p>
-    </li>
-    <br>
-    <li>
-      <h6>Create a document to monitor my work flow and productivity</h6>
-      <img src="images/Screenshot 2020-02-14 at 13.29.07.png" alt="spreadsheet of task overview" class="tasks" >
 
-      <img src="images/Screenshot 2020-02-14 at 13.29.40.png" alt="spreadsheet of weekly overview" class="tasks">
-      <ul>
-        <li>
-          All tasks go into a spreadsheet, with an ID and overview when I started and finished the task
-        </li>
-        <li>
-          A week to week overview with the tasks I want to tackle: a list above and then assigning them to each day, dividing it into “Caculation" and “Realtime"
-        </li>
-      </ul>
-      Besides managing my time better and not drop the ball on anything, it also helps to see how long tasks actually take. This will in turn make planning for new or similar tasks and projects more realistic.
-    </li>
-    <br>
-    <li>
-      <h6>Issue Tracker</h6>
-      Stephanie and I started using GitLab's issues to track discussions and document our decision making process and results. We are only a team of two at the moment, but for future projects we want to collaborate and work in larger teams, that will most likely work in an asynchronous manner.
-      <ul>
-        <li>
-          By opening issues and linking/assigning the members that should be involved in the decision making process and/or will be affected by the results, everyone is up to date on the status, can ask questions to clarify points, and contribute to the final results, independently from other team members making time to bring them up to speed.
-        </li>
-        <li>
-          The Issue opener can serve as a moderator for the issue or assign someone else to take charge.
-        </li>
-        <li>
-          Nothing gets dropped, the issues can serve as a to do list, it is easily visible if issue still needs resolving or are closed.
-        </li>
-        <li>
-          Issues document when decisions were made, why, how and by whom. Others can reread the documentation in an efficient way, instead of having to set up a chat with coworkers - who might work in different time zones or don’t have room in their schedule in a timely manner.
-        </li>
-        <li>
-          All discussions are linked to the project, all essential information is gathered in one place and available for other collaborators or new team members. They don't have to give them access to googledDocs or sending phone protocols back and forth.
-        </li>
-        <li>
-          There are other options such as Milestone or Due Date, that we will still have to include in the issues.
-        </li>
-      </ul>
-    </li>
-    <br>
-    <li>
-      <h6>Starting an Error Log</h6>
-      I started a file to record the errors I encounter along the way, plus the solution. This way with a reoccurring error I know where to check first, because contrary to my own believe, I will surely remember next time how I solves this” is not always true. unfortunately;
-
-      Especially helpful when start using a new programming language or framework, and you are still not familiar with all the errors.
-    </li>
-  </ul>
-    <div>
-      <h5>Goal</h5>
-      <ul>
-        <li>
-          Build a fully functional web application for vocabulary training, that enables the user to
-          <ul>
-            <li>Set up an account, signing in with facebook, google or email</li>
-            <li>Create individual cards, fill in the word, translation and upload a picture from a folder or through a googlesearch</li>
-            <li>Group cards in decks</li>
-            <li>Go through decks and fill out cards, then get the result (right or wrong) and be shown the right answer</li>
-            <li>See their progress through a deck</li>
-            <li>Reset a deck and start again</li>
-          </ul>
-        </li>
-        <li>
-          Learn to work in a collaborative and asynchronous fashion in a team of UX Designer and Software Engineer.
-        </li>
-      </ul>
-    </div>
-
-    <h5>Approach</h5>
+    <h5 class="mt-4">Approach</h5>
     <div>
       <ul>
         <li>
@@ -174,7 +63,7 @@
       </ul>
     </div>
 
-    <h6>Trello Instructions:</h6>
+    <h6 class="mt-4">Trello Instructions:</h6>
     <p>
       <ul>
         <li>
@@ -204,43 +93,120 @@
       </ul>
     </p>
 
-    <h5>Schema</h5>
-    <div>
-      <img src="images/schema.png" alt="schema of the app" id="schema">
-    </div>
+    <h5 class="mt-4">Schema</h5>
+    <img src="images/schema.png" alt="schema of the app" class="w-full image-sm">
+    <h5 class="mt-4">What I learned</h5>
+    <ul>
+      <li>Working with a CI Pipeline on GitLab</li>
+      <li>Implementing feature to play through a deck of cards</li>
+      <li>
+        Vue.js, RoR as an API, and TDD
+        <p> After doing a deep dive into Vue.js (and absolutely loving it!) and learning more about using Ruby on Rails as an API,
+          I started a completely new repository, leaving the first version of the flashcard app behind, that I started building
+          using only RoR. This gave me a chance to rethink the application more and apply all the newly acquired knowledge.</p>
+        <p>I am thrilled about how the project is coming along and learning so much along the way. I want to put an emphasis
+          on the territory of TDD, which I didn't know a lot about and was somehow a little intimidating by. However, learning
+          from a colleague <a href="https://www.youtube.com/channel/UC9bsDBNvCZEEjrjFdFLtIYAand" target="_blank" class="custom-link">Juan Vqz</a>
+          and his tutorial on <a href="https://www.youtube.com/playlist?list=PL4yLj0azo9NU-qUCvSUZSm92gdxFJAWRc" target="_blank" class="custom-link"> Vue and RoR </a>
+          that all changed rapidly, and I am all aboard, seeing how much easier it makes life in the long run. So thank you for that, Juan!</p>
+      </li>
+      <li>
+        Implementing an API to fetch pictures from Unsplash
+        <p>Inside this, limiting the amount of pictures displayed with the option to show more results.
+          The amount of learning you can achieve by only one “little" feature is immense and very satisfying.
+          I had been working on this feature to use unsplash as a resource for pictures for a day, watching tutorials, 
+          reading medium articles and stack overflow threads. It would just not come together.
+          Before it got to a level of frustration that makes it hard to get back from, I took a break, went for a run,
+          had something to eat and listened to my audiobook for 5 minutes while my mind was already heading back to coding.
+          And low and behold, I read one more medium article, and all of a sudden it did work! All of the stress and insecurities
+          and frustration just went away and were forgotten about and I moved on to the next feature - after staging my stages to
+          git of course!</p>
+        <p>The process taught me the value of stepping back and approaching a problem with a fresh perspective.</p>
+      </li>
+      <li>Picture upload directly from your device</li>
+      <li>Always have your server logs open when coding
+        <p>When creating a new card, the user can pick more than one deck in which the card should be placed. However this did not work.
+          After studying the server logs in real time for a few tries, and using tools such as Postman and the useful <code>console.log(something I want to know, such as data)</code>,
+          it turned out that the data set that was passed along to the database had a slightly different syntax than expected.
+          Namely the array of deck-ids were not found within the card parameters.</p>
+        <pre>
+          <code>
+           Parameters: {“word"=>"nuevo", "translation"=>"new", "picture"=>"", "hint"=>"", "flipped"=>false, "deck_ids"=>[12, 11], "card"=>{"word"=>"nuevo", "translation"=>"new", "picture"=>"", "hint"=>"", "flipped"=>false}}
+          </code>
+        </pre>
+        <p>It turns out that I had to change the axios syntax in the store very slightly from</p>
+        <code>return axios.post('/cards', card)</code>
+        <p class="mt-2">to</p>
+        <code>return axios.post('/cards', {card: card})</code>.
+        <pre>
+          <code>
+             Parameters: {“card"=>{"word"=>"el maestro", “translation"=>"the teacher", "picture"=>"", "hint"=>"", "flipped"=>false, "deck_ids"=>[12, 11]}}
+          </code>
+        </pre>
+        <p>
+          Credit for finding and fixing the error goes to <a href="https://www.dimitribosch.com/" target="blank" class="custom-link">Dimi</a>. Some things just come with experience, I would not have found the solution to that online, and it is still unclear, why only deck-ids was placed outside of the card parameters.
+        </p>
+      </li>
+      <li>
+        Create a document to monitor my workflow and productivity
+        <img src="images/Screenshot 2020-02-14 at 13.29.07.png" alt="spreadsheet of task overview" class="image-sm">
+        <img src="images/Screenshot 2020-02-14 at 13.29.40.png" alt="spreadsheet of weekly overview" class="image-sm">
+        <ul>
+          <li>All tasks go into a spreadsheet, with an ID and overview when I started and finished the task</li>
+          <li>A week to week overview with the tasks I want to tackle: a list above and then assigning them to each day, dividing it into “Caculation" and “Realtime"</li>
+          <li>Besides managing my time better and not drop the ball on anything, it also helps to see how long tasks actually take. This will in turn make planning for new or similar tasks and projects more realistic.</li>
+        </ul>
+      </li>
+      <li>Issue Tracker</li>
+        Stephanie and I started using GitLab's issues to track discussions and document our decision making process and results. We are only a team of two at the moment, but for future projects we want to collaborate and work in larger teams, that will most likely work in an asynchronous manner.
+        <ul>
+          <li>
+            By opening issues and linking/assigning the members that should be involved in the decision making process and/or will be affected by the results, everyone is up to date on the status, can ask questions to clarify points, and contribute to the final results, independently from other team members making time to bring them up to speed.
+          </li>
+          <li>
+            The Issue opener can serve as a moderator for the issue or assign someone else to take charge.
+          </li>
+          <li>
+            Nothing gets dropped, the issues can serve as a to do list, it is easily visible if issue still needs resolving or are closed.
+          </li>
+          <li>
+            Issues document when decisions were made, why, how and by whom. Others can reread the documentation in an efficient way, instead of having to set up a chat with coworkers - who might work in different time zones or don’t have room in their schedule in a timely manner.
+          </li>
+          <li>
+            All discussions are linked to the project, all essential information is gathered in one place and available for other collaborators or new team members. They don't have to give them access to googledDocs or sending phone protocols back and forth.
+          </li>
+          <li>
+            There are other options such as Milestone or Due Date, that we will still have to include in the issues.
+          </li>
+        </ul>
+      </li>
+      <li>Starting an Error Log</li>
+        I started a file to record the errors I encounter along the way, plus the solution. This way with a reoccurring error I know where to check first, because contrary to my own believe, I will surely remember next time how I solves this” is not always true. unfortunately;
+
+        Especially helpful when start using a new programming language or framework, and you are still not familiar with all the errors.
+      </li>
+    </ul>
+
+    
 
     <h5 class="mt-4 mb-2">Responsibilities</h5>
-    <div>
-      <h5>
-        Stephanie
-      </h5>
-      <p>UX and UI Design</p>
-      <h5>
-      Elisa
-      </h5>
-      <p>Frontend and backend</p>
+    <p>Stephanie for UX/UI Design and Elisa for frontend and backend development.</p>
+
+    <div class="casestudy-directory mt-4 mb-4">
+      <a href="casestudy_calculator.html" class="custom-link">Previous case study</a>
+      <a href="index.html" class="custom-link">Home</a>
+      <a href="casestudy_rreminder.html" class="custom-link">Next case study</a>
     </div>
+
+    <footer class="text-center p-4 mt-8">
+      <div class="flex justify-center space-x-4">
+        <a href="https://github.com/codersquirrelbln/" target="_blank" class="text-gray-700"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank" class="text-blue-700"><i class="fab fa-linkedin"></i></a>
+        <a href="https://gitlab.com/codersquirrel" target="_blank" class="text-orange-500"><i class="fab fa-gitlab"></i></a>
+        <a href="https://twitter.com/codersquirrel1" target="_blank" class="text-blue-400"><i class="fab fa-twitter"></i></a>
+      </div>
+      &copy; 2024 Elisa Burghard
+    </footer>
   </div>
-
-
-  <div>
-    <ul class="casestudy-directory">
-      <li><a href="casestudy_calculator.html" class="link">Previous case study</a></li>
-      <li><a href="index.html" class="link">Home</a></li>
-      <li><a href="casestudy_rreminder.html" class="link">Next case study</a></li>
-    </ul>
-  </div>
-
-  <footer>
-    <div class="contact">
-      <ul class="list-inline">
-        <li class="list-inline-item footer">&copy 2024, Elisa Burghard</li>
-        <li class="list-inline-item icon-footer"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github footer icon-footer "></i></a></li>
-        <li class="list-inline-item footer icon-footer"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin footer icon-footer"></i></a></li>
-        <li class="list-inline-item footer icon-footer"><a href="https://gitlab.com/codersquirrel" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
-        <li class="list-inline-item footer icon-footer"><a href="https://twitter.com/codersquirrel1" target="_blank"> <i class="fab fa-twitter"></i></a></li>
-      </ul>
-    </div>
-  </footer>
 </body>
 </html>

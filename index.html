@@ -1,140 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Portfolio</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+      <img class="inline-block rounded-full h-24 w-24 object-cover mx-auto" src="images/elisa_profile_pic.jpg" alt="Profile Picture of Elisa">
+      <h2 class="text-2xl font-bold mt-4">Hi, I am Elisa, a full-stack software developer based in Bozeman, Montana.</h2>
+      <p class="mt-2 text-base">In my free time, you can find me climbing, solving jigsaw puzzles or Sudoku, reading a crime novel, or learning a new language.</p>
+      <p class="mt-2 text-base">Please feel free to look at my past and current projects and reach out at any time at <span id="email" class="cursor-pointer underline custom-link">codersquirrelbln@gmail.com</span></p>
+    </div>
 
-  <body>
-    <div class="container">
-      <div class="responsive-container">
-        <img class="pic mx-auto d-block" src="images/elisa_profile_pic.jpg" alt="Profile Picture of Elisa">
-        <div class="content">
-          <h2 class="title mb-3">Hi, I am Elisa, a full-stack software developer based in Bozeman, Montana.</h2>
-          <p>
-            In my free time, you can find me climbing, solving jigsaw puzzles or Sudoku, reading a crime novel or learning a new language.
-          </p>
-          <p>
-            Please feel free to look at my past and current projects and reach out at any time at <span id="email" style="cursor: pointer; color: #125F60; text-decoration: underline;">codersquirrelbln@gmail.com</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="responsive-container">
-        <div>
-          <h2 class="title">Line</h2>
-        <img class="mb-3 mx-auto d-block image-size" id="line-pic" src="images/line.png" alt="Screenshot of the Line Platform">
-        </div>
-        <div class="content">
-           <p class="mb-3">
-            <a href="https://github.com/buildwithline/line" target="_blank">Line</a> is a platform that aims to facilitate the financial contribution to open source projects, using web3 technology.
-          </p>
-          <div class="button-project">
-            <a href="https://github.com/buildwithline/line" target="_blank">Code</a>
-            <a href="casestudy_line.html">Case study</a>
-            <a href="https://withline.xyz/" target="_blank">Read more</a>
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="images/line.png" alt="Screenshot of the Line Platform">
+          <div class="p-4 card-body">
+            <div class="project-info">
+              <h3 class="font-bold mb-4">Line</a></h3>
+              <p class="mt-2 text-base">facilitates the financial contribution to open source projects, using web3 technology.</p>
+              <div class="flex space-x-2 mt-4">
+                <a href="https://github.com/buildwithline/line" target="_blank" class="custom-link">Code</a>
+                <a href="casestudy_line.html" class="custom-link">Case Study</a>
+                <a href="https://withline.xyz/" target="_blank" class="custom-link">withline.xyz</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="responsive-container">
-        <div>
-          <h2 class="title">ElderMe</h2>
-        <img class="mb-3 mx-auto d-block" id="elderme-pic" src="images/eldermeLandingpageScreenshot.png" alt="Screenshot of the ElderMe app">
-        </div>
-        <div class="content">
-           <p class="mb-3">
-            <a href="https://github.com/codersquirrelbln/elderme" target="_blank">ElderMe</a> is a platform for senior users to find volunteers for activities such as going to the theatre, meeting for a cup of tea or taking a walk in the park. The project was built within two weeks using Ruby on Rail in collaboration with front end developers <a href="https://github.com/Holdenro" target="_blank">Ronan Recune</a> and <a href="https://github.com/M-algbawi" target="_blank">Monther Al Gbawi</a>.
-          </p>
-          <div class="button-project">
-             <a href="https://github.com/codersquirrelbln/elderme" target="_blank">Code</a>
-            <a href="casestudy_elderme.html">Case study</a>
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+          <img class="w-full" src="images/eldermeLandingpageScreenshot.png" alt="Screenshot of the ElderMe app">
+          <div class="p-4 card-body">
+            <h3 class="font-bold mb-4">ElderMe</a> </h3>
+            <p class="mt-2 text-base">is a platform for senior users to find volunteers for activities and outings.</p>
+            <div class="flex space-x-2 mt-4">
+              <a href="https://github.com/codersquirrelbln/elderme" target="_blank" class="custom-link">Code</a>
+              <a href="casestudy_elderme.html" class="custom-link">Case Study</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="responsive-container">
-        <div>
-          <h2 class="title">Visa Calculator</h2>
-          <img src="images/visa_calculator_landing.png" alt="Screenshot of the Visa calculator" id="calculator-pic" class="mb-3 mx-auto d-block">
-        </div>
-        <div class="content">
-          <p class="mb-3">
-            <a href="https://github.com/codersquirrelbln/visa_calculator" target="_blank">The Visa Calculator</a> enables travellers to calculate one or multiple trips to a country or visa zone such as the Schengen Zone. The user can insert individual visa regulations such as ho many days out if a time frame you may be in the country. It informs the user how many days they can still use up or have to remove to not overstay the visit.
-            This project was built using JavaScript and made use of the flatpickr as a datetime picker in collaboration with front end developer <a href="https://github.com/Holdenro" target="_blank">Ronan Recune</a>.
-          </p>
-          <div class="button-project" >
-            <a href="https://github.com/codersquirrelbln/visa_calculator" target="_blank">Code</a>
-            <a href="casestudy_calculator.html">Case study</a>
-            <a href="https://codersquirrelbln.github.io/visa_calculator/" target="_blank">Go to Project</a>
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+          <img class="w-full" src="images/visa_calculator_landing.png" alt="Screenshot of the Visa Calculator">
+          <div class="p-4 card-body">
+            <h3 class="font-bold mb-4">The Visa Calculator</a></h3>
+            <p class="mt-2 text-base">enables travelers to calculate stays to comply with visa regulations.</p>
+            <div class="flex space-x-2 mt-4">
+              <a href="https://github.com/codersquirrelbln/visa_calculator" target="_blank" class="custom-link">Code</a>
+              <a href="casestudy_calculator.html" class="custom-link">Case Study</a>
+              <a href="https://codersquirrelbln.github.io/visa_calculator/" target="_blank" class="custom-link">Go to Project</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="responsive-container">
-        <div>
-          <h2 class="title">Flashcard App</h2>
-          <img src="images/roadmap.jpg" alt="drawn out roadmap" id="flashcard-pic" class="mb-3 mx-auto d-block">
-        </div>
-        <div class="content">
-          <p class="mb-3">
-            This <a href="https://gitlab.com/codersquirrel/flashBack" target="_blank">Flashcard App</a> helps learning new words in a foreign language, manually add new words as well as a picture to go along with it. The picture can either be taken individually or inserted from sources off the internet.
-            This project will be build in Ruby on Rails in collaboration with designer <a href="http://stephaniehawkins.design/" target="_blank">Stephanie Hawkins</a>.
-            <p>This is still a work in progress and will be updated as it advances.</p>
-          </p>
-          <div class="button-project">
-            <a href="https://gitlab.com/codersquirrel/flashBack" target="_blank">Code</a>
-            <a href="casestudy_flashcards.html">Case study</a>
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <div class="card bg-white shadow-lg rounded-lg overflow-hidden">
+          <img class="w-full" src="images/roadmap.jpg" alt="Drawn Out Roadmap">
+          <div class="p-4 card-body">
+            <h3 class="font-bold mb-4">FlashBack</a></h3>
+            <p class="mt-2 text-base"> helps learning new words in a foreign language.</p>
+            <div class="flex space-x-2 mt-4">
+              <a href="https://gitlab.com/codersquirrel/flashBack" target="_blank" class="custom-link">Code</a>
+              <a href="casestudy_flashcards.html" class="custom-link">Case Study</a>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="responsive-container">
-        <div>
-          <h2 class="title">Reminder App</h2>
-          <img src="images/r_reminder.png" id="flashcard-pic" class="mb-3 mx-auto d-block">
-        </div>
-        <div class="content">
-          <p class="mb-3">
-            This <a href="https://gitlab.com/codersquirrel/r_reminder" target="_blank"> Reminder App</a> will help you to never forget anything ever again. You can create an account and create reminders with a specific date and time, and the reminder email will be sent to you on a monthly basis.
-          </p>
-          <div class="button-project">
-            <a href="https://gitlab.com/codersquirrel/r_reminder" target="_blank">Code</a>
-            <a href="casestudy_rreminder.html">Case study</a>
-          </div>
-        </div>
+    <footer class="text-center p-4 mt-8">
+      <div class="flex justify-center space-x-4">
+        <a href="https://github.com/codersquirrelbln/" target="_blank" class="text-gray-700"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank" class="text-blue-700"><i class="fab fa-linkedin"></i></a>
+        <a href="https://gitlab.com/codersquirrel" target="_blank" class="text-orange-500"><i class="fab fa-gitlab"></i></a>
+        <a href="https://twitter.com/codersquirrel1" target="_blank" class="text-blue-400"><i class="fab fa-twitter"></i></a>
       </div>
+      &copy; 2024 Elisa Burghard
+    </footer>
 
-  <footer>
-  <div class="contact">
-    <ul class="list-inline">
-      <li class="list-inline-item footer">&copy 2024, Elisa Burghard</li>
-      <li class="list-inline-item icon-footer"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github footer icon-footer "></i></a></li>
-      <li class="list-inline-item footer icon-footer"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin footer icon-footer"></i></a></li>
-      <li class="list-inline-item footer icon-footer"><a href="https://gitlab.com/codersquirrel" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
-      <li class="list-inline-item footer icon-footer"><a href="https://twitter.com/codersquirrel1" target="_blank"> <i class="fab fa-twitter"></i></a></li>
-    </ul>
-  </div>
-  </footer>
-  </body>
-  <script>
-    document.getElementById('email').addEventListener('click', function(event) {
-      let email = document.getElementById('email').innerText;
-      let tempInput = document.createElement('input');
-      document.body.appendChild(tempInput);
-      tempInput.value = email;
-      tempInput.select();
-      document.execCommand('copy');
-      document.body.removeChild(tempInput);
-      
-      alert('Email address copied to clipboard!');
-    });
-  </script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('email').addEventListener('click', function(event) {
+            navigator.clipboard.writeText('codersquirrelbln@gmail.com')
+                .then(() => alert('Email address copied to clipboard!'))
+                .catch(err => console.error('Error copying email to clipboard: ', err));
+        });
+    </script>
+</body>
 </html>

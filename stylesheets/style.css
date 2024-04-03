@@ -1,148 +1,72 @@
-.title {
-  padding-bottom: 15px;
-  padding-top: 2em;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-a {
-  color: #125F60 !important;
-  cursor:pointer;
+.custom-link {
+  color: #125F60;
   text-decoration: underline;
 }
 
-.responsive-container {
-  box-sizing: border-box;
-  max-width: 1200px;
+.custom-link:hover {
+  color: #0f4f4f;
+}
+
+.card {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .responsive-container {
-    display: block;
-  }
+p, h1, h2, h3, h4, h5, h6, ul{
+  color: #084343;
 }
 
-.content {
-  margin-left: 20px;
+.card img {
+  height: 200px; 
+  object-fit: cover;
+  width: calc(100% - 2rem);
+  margin: 0.5rem auto;
 }
 
-.pic {
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 200px;
-  max-height: 200px;
-  border-radius: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.container {
-  margin: 0 20px;
-}
-
-.button {
-  background-color: #c8e4d894;
-  border-radius: 5px;
-  padding: 10px 10px;
-  color: #125F60;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  margin:5px 5px;
-}
-
-.button-project {
-  margin-top: 42px;
-}
-
-.button:hover {
-  background-color: #c0dacf;
-  color: #125F60;
-  text-decoration: none;
-}
-
-.button-project a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.tasks {
-  height: 200px;
-  margin: 5px 20px;
-}
-
-.casestudy-directory {
+.card-body {
+  flex: 1;
   display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  font-size: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 0px;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
-/*contact icons*/
-.list-inline-item {
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 25px;
-  content: "\f09b";
-  opacity: 30%;
-}
-
-.list-inline-item:hover {
-  opacity: 100%;
-}
-
-.fa-github{
-  color: black;
-}
-
-.fa-linked-in {
-  color: blue;
+.project-info {
+  flex-grow: 1; 
 }
 
 .fa-gitlab {
   color: orange;
 }
 
-.fa-envelope {
-  color: red;
-}
-
-.contact {
+.casestudy-directory {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
+  list-style-type: none; 
+  padding: 0; 
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  font-size: 10px;
+.casestudy-directory li {
+  margin: 0 10px; 
 }
 
-.icon-footer {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
+.custom-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+}
+.image-sm {
+  width: 100px;
 }
 
-#schema {
-  height: 200px;
-}
-
-#elderme-pic, #calculator-pic, #flashcard-pic {
-  padding-top: 5px;
-  height: 200px;
-  width: 350px;
-  background-size: cover;
- }
-
-.image-size {
-  width: 100%;
-  max-width: 400px; 
-  height: auto;
+.code-snippet {
+  background-color: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
