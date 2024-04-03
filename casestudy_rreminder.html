@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
@@ -27,25 +24,40 @@
         <h5>Approach</h5>
         <h6>First steps</h6>
           <p>
-            First, I drew out a very simple schema with two tables - users and reminders with their columns and foreign key. Then I sketched out user journeys(views). In order to formulate the needed tests, I wrote out user journeys - the happy paths.
+            First, I drew out a very simple schema with two tables - users and reminders with their columns and foreign key. Then I sketched out user journeys(views).
+            In order to formulate the needed tests, I wrote out user journeys - the happy paths.
           </p>
         </li>
         <h6>TDD</h6>
         <p>
-         TDD does not only force you to be clear about the user journey, validations and associations of the models before starting to write the rest of the code, but it also serves as a guideline, a checklist. I had an incredible time improving my skills with testing. I especially liked using <a href="https://github.com/teamcapybara/capybara" target="_blank" class="link">capybara</a> and <a href="https://github.com/thoughtbot/factory_bot" target="_blank" class="link">FactoryBot</a> to go through one user journey at a time. Tests lead you where the code needs to go, the minimalistic approach makes the best of your time and resources, keeping the code clean, clear and light. I didn’t include tests for controllers or views, as they are partially included in the feature and model tests and we can trust rails and devise to do their job.
+         TDD does not only force you to be clear about the user journey, validations and associations of the models before starting to write the rest of the code, but it also serves as a guideline, a checklist.
+         I had an incredible time improving my skills with testing. I especially liked using <a href="https://github.com/teamcapybara/capybara" target="_blank" class="custom-link">capybara</a> and
+         <a href="https://github.com/thoughtbot/factory_bot" target="_blank" class="custom-link">FactoryBot</a> to go through one user journey at a time. Tests lead you where the code needs to go,
+         the minimalistic approach makes the best of your time and resources, keeping the code clean, clear and light. I didn't include tests for controllers or views, as they are partially included
+         in the feature and model tests and we can trust rails and devise to do their job.
         </p>
         <h6>Obstacles</h6>
         <p>
-          At the beginning, I was uncertain how many helpers and gems I should use. I want to show off, that I understand and am familiar with the basics. However, coding is about trade offs and code needs to be shipped, sometimes better sooner than later. I had started writing tests for the user and reminder models and consequently generated the models, when I decided that my main focus should not be to create the login/out logic, but more on the actual reminder functionality and email sending. So I changed to using the <a href="https://github.com/heartcombo/devise" target="_blank" class="link">devise gem</a> to help me out and make my life easier. In retrospect that should have been the approach from the beginning, as I saw it causing problems now. Creating a new user model with devise caused conflicts with the already existing model. I did not have anything in my database, so I decided to drop it in order to delete the first model table to enable a new migration. It is not best practice to delete migration files, and in retrospect it would have been better to drop the tables in newly generated migrations.
+          At the beginning, I was uncertain how many helpers and gems I should use. I want to show off, that I understand and am familiar with the basics. However, coding is about trade offs and code needs to be shipped,
+          sometimes better sooner than later. I had started writing tests for the user and reminder models and consequently generated the models, when I decided that my main focus should not be to create the login/out logic,
+          but more on the actual reminder functionality and email sending. So I changed to using the <a href="https://github.com/heartcombo/devise" target="_blank" class="custom-link">devise gem</a> to help me out and make my life easier.
+          In retrospect that should have been the approach from the beginning, as I saw it causing problems now. Creating a new user model with devise caused conflicts with the already existing model. I did not have anything in my database,
+          so I decided to drop it in order to delete the first model table to enable a new migration. It is not best practice to delete migration files, and in retrospect it would have been better to drop the tables in newly generated migrations.
         </p>
         <h6>Creating a Reminder</h6>
         <p>
-          The task mentioned that the user can create a reminder, for example on the first, second, third day of every month. First I thought about a drop down menu with specific options, but that was too limiting. Having used <a href="https://flatpickr.js.org/" target="_blank" class="link">flatpickr</a> as a date picker before, I decided to use it again.  I had created two different columns in the reminder table, date and time, but later decided to merge them into one. In consequence I had to change the reminders#new and home views, as well as reminderModel and tests. This time I did follow the best practice and used migration files to accomplish the schema changes.
+          The task mentioned that the user can create a reminder, for example on the first, second, third day of every month. First I thought about a drop down menu with specific options, but that was too limiting.
+          Having used <a href="https://flatpickr.js.org/" target="_blank" class="custom-link">flatpickr</a> as a date picker before, I decided to use it again.  I had created two different columns in the reminder table,
+          date and time, but later decided to merge them into one. In consequence I had to change the reminders#new and home views, as well as reminderModel and tests. This time I did follow the best practice and used migration
+          files to accomplish the schema changes.
         </p>
         <h6>Sending Emails</h6>
         <p>
-          For sending actual emails, I used <a href="https://www.mailgun.com/" target="_blank" class="link">MailGun</a>, which a developer recommended. Figuring out the <a href="https://github.com/javan/whenever" target="_blank" class="link">whenever gem</a> took some time. I started by creating an automated function, deleting a reminder with a specific title, every two minutes. When that worked, I started sending a welcome email. However, this interfered with my specs for user, reminder and signup, because MailerGun only allows you to use the sandbox for testing purposes. For this reason, it is now commented out.
-          Then I focused on sending email reminders and calling it every minute in schedule.rb: I defined the date and time of today and now as well as the length of this month. The last variable was important, because if a user creates a reminder on the 31st of a month, the reminder would be skipped every month that doesn’t have 31 days. To avoid that, I created an if-statement, assigning the reminder_day to the month_length (an integer), if the month had less days than the reminder date.
+          For sending actual emails, I used <a href="https://www.mailgun.com/" target="_blank" class="custom-link">MailGun</a>, which a developer recommended. Figuring out the <a href="https://github.com/javan/whenever" target="_blank" class="custom-link">whenever gem</a>
+          took some time. I started by creating an automated function, deleting a reminder with a specific title, every two minutes. When that worked, I started sending a welcome email. However, this interfered with my specs for user, reminder and signup, because MailerGun
+          only allows you to use the sandbox for testing purposes. For this reason, it is now commented out.
+          Then I focused on sending email reminders and calling it every minute in schedule.rb: I defined the date and time of today and now as well as the length of this month. The last variable was important, because if a user creates a reminder on the 31st of a month,
+          the reminder would be skipped every month that doesn't have 31 days. To avoid that, I created an if-statement, assigning the reminder_day to the month_length (an integer), if the month had less days than the reminder date.
           <pre>
             <code>
               if today_month_length < reminder_date
@@ -91,33 +103,32 @@
           Rails provides us with a lot of help, there is no reason to reinvent the wheel.
         </li>
         <li>
-          It might feel like a waste of time, especially with the pressure of a deadline to do a deep dive into a topic; however the learning effect is much higher when making it the number one priority to understand the code and know how to write it yourself. In short term it might seem more plausible to jump right in and look up topics as you go. Long term it makes much more sense to approach it just with that in mind: the long term benefits. You are not only learning to solve this problem in front of you to pass a test - it just serves as a vehicle - , but you learn to be the best developer you can be. In that sense it is similar to being a health care professional. If you have seen a certain illness before, you have a much better chance of recognizing the symptoms the next time a patients presents with them, hence making it more likely that you can heal your patient or doing so much faster. That knowledge in itself is very valuable, but it also enables you to share this information and experience and teach it to someone else. This way, you are not only enabling yourself, but also empowering the developers around you, in your team and beyond - an amazing opportunity to contribute to someone else's learning process.
+          It might feel like a waste of time, especially with the pressure of a deadline to do a deep dive into a topic; however the learning effect is much higher when making it the number one priority to understand the code and know how to write it yourself.
+          In short term it might seem more plausible to jump right in and look up topics as you go. Long term it makes much more sense to approach it just with that in mind: the long term benefits. You are not only learning to solve this problem in front of
+          you to pass a test - it just serves as a vehicle - , but you learn to be the best developer you can be. In that sense it is similar to being a health care professional. If you have seen a certain illness before, you have a much better chance of
+          recognizing the symptoms the next time a patients presents with them, hence making it more likely that you can heal your patient or doing so much faster. That knowledge in itself is very valuable, but it also enables you to share this information
+          and experience and teach it to someone else. This way, you are not only enabling yourself, but also empowering the developers around you, in your team and beyond - an amazing opportunity to contribute to someone else's learning process.
         </li>
       </p>
     </div>
-
-
   </div>
-
 
   <div>
     <ul class="casestudy-directory">
-      <li><a href="casestudy_flashcards.html" class="link">Previous case study</a></li>
-      <li><a href="index.html" class="link">Home</a></li>
-      <li><a href="casestudy_line.html" class="link">Next case study</a></li>
+      <li><a href="casestudy_flashcards.html" class="custom-link">Previous case study</a></li>
+      <li><a href="index.html" class="custom-link">Home</a></li>
+      <li><a href="casestudy_line.html" class="custom-link">Next case study</a></li>
     </ul>
   </div>
 
-  <footer>
-    <div class="contact">
-      <ul class="list-inline">
-        <li class="list-inline-item footer">&copy 2024, Elisa Burghard</li>
-        <li class="list-inline-item icon-footer"><a href="https://github.com/codersquirrelbln/" target="_blank"><i class="fab fa-github footer icon-footer "></i></a></li>
-        <li class="list-inline-item footer icon-footer"><a href="https://www.linkedin.com/in/elisaburghard/" target="_blank"><i class="fab fa-linkedin footer icon-footer"></i></a></li>
-        <li class="list-inline-item footer icon-footer"><a href="https://gitlab.com/codersquirrel" target="_blank"> <i class="fab fa-gitlab"></i></a></li>
-      </ul>
+  <footer class="text-center p-4 mt-8">
+    <div class="flex justify-center space-x-4">
+      <a href="https://github.com/codersquirrelbln/" target="_blank" class="text-gray-700"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank" class="text-blue-700"><i class="fab fa-linkedin"></i></a>
+      <a href="https://gitlab.com/codersquirrel" target="_blank" class="text-orange-500"><i class="fab fa-gitlab"></i></a>
+      <a href="https://twitter.com/codersquirrel1" target="_blank" class="text-blue-400"><i class="fab fa-twitter"></i></a>
     </div>
-
+    &copy; 2024 Elisa Burghard
   </footer>
 </body>
 </html>

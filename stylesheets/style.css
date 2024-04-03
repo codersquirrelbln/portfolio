@@ -43,6 +43,10 @@ p, h1, h2, h3, h4, h5, h6, ul{
   color: orange;
 }
 
+.fa-github {
+  color: black;
+}
+
 .casestudy-directory {
   display: flex;
   justify-content: center; 
@@ -61,7 +65,7 @@ p, h1, h2, h3, h4, h5, h6, ul{
   background-color: #fff;
 }
 .image-sm {
-  width: 100px;
+  height: 150px;
 }
 
 .code-snippet {
