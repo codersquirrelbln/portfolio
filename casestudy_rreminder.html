@@ -2,57 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casestudy Reminder</title>
+  <title>R Reminder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
-  <div class="container">
-    <h4 class="mt-4 title">Case study R Reminder</h4>
-      <h5>Goal</h5>
-        Build a reminder app, that enables the user to
-        <ul>
-          <li>Set up an account with email and password</li>
-          <li>Create reminders with a title, description and a specific day of the month and time, which will be sent via email monthly</li>
-          <li>Delete reminders individually</li>
-        </ul>
-        <h5>Approach</h5>
-        <h6>First steps</h6>
-          <p>
+  <div class="mx-auto max-w-xl p-5 bg-white">
+    <h2 class="text-2xl font-bold mt-4 mb-4">R Reminder</h2>
+    <div>
+      <h4 class="text-xl font-semibold my-2 mt-6">Goal</h4>
+      <p class="mt-2 text-base">Build a reminder app, that enables the user to </p>
+      <ul class="list-disc pl-5">
+        <li>Set up an account with email and password</li>
+        <li>Create reminders with a title, description and a specific day of the month and time, which will be sent via email monthly</li>
+        <li>Delete reminders individually</li>
+      </ul>
+    
+      <h4 class="text-xl font-semibold my-2 mt-6">Approach</h4>
+      <h5 class="text-md font-semibold my-2 mt-6">First steps</h5>
+          <p class="mt-2 text-base">
             First, I drew out a very simple schema with two tables - users and reminders with their columns and foreign key. Then I sketched out user journeys(views).
             In order to formulate the needed tests, I wrote out user journeys - the happy paths.
           </p>
-        </li>
-        <h6>TDD</h6>
-        <p>
+        <h6 class="text-sm font-normal my-2 mt-6">TDD</h6>
+        <p class="mt-2 text-base">
          TDD does not only force you to be clear about the user journey, validations and associations of the models before starting to write the rest of the code, but it also serves as a guideline, a checklist.
          I had an incredible time improving my skills with testing. I especially liked using <a href="https://github.com/teamcapybara/capybara" target="_blank" class="custom-link">capybara</a> and
          <a href="https://github.com/thoughtbot/factory_bot" target="_blank" class="custom-link">FactoryBot</a> to go through one user journey at a time. Tests lead you where the code needs to go,
          the minimalistic approach makes the best of your time and resources, keeping the code clean, clear and light. I didn't include tests for controllers or views, as they are partially included
          in the feature and model tests and we can trust rails and devise to do their job.
         </p>
-        <h6>Obstacles</h6>
-        <p>
+        <h6 class="text-sm font-normal my-2 mt-6">Obstacles</h6>
+        <p class="mt-2 text-base">
           At the beginning, I was uncertain how many helpers and gems I should use. I want to show off, that I understand and am familiar with the basics. However, coding is about trade offs and code needs to be shipped,
           sometimes better sooner than later. I had started writing tests for the user and reminder models and consequently generated the models, when I decided that my main focus should not be to create the login/out logic,
           but more on the actual reminder functionality and email sending. So I changed to using the <a href="https://github.com/heartcombo/devise" target="_blank" class="custom-link">devise gem</a> to help me out and make my life easier.
           In retrospect that should have been the approach from the beginning, as I saw it causing problems now. Creating a new user model with devise caused conflicts with the already existing model. I did not have anything in my database,
           so I decided to drop it in order to delete the first model table to enable a new migration. It is not best practice to delete migration files, and in retrospect it would have been better to drop the tables in newly generated migrations.
         </p>
-        <h6>Creating a Reminder</h6>
-        <p>
+        <h6 class="text-sm font-normal my-2 mt-6">Creating a Reminder</h6>
+        <p class="mt-2 text-base">
           The task mentioned that the user can create a reminder, for example on the first, second, third day of every month. First I thought about a drop down menu with specific options, but that was too limiting.
           Having used <a href="https://flatpickr.js.org/" target="_blank" class="custom-link">flatpickr</a> as a date picker before, I decided to use it again.  I had created two different columns in the reminder table,
           date and time, but later decided to merge them into one. In consequence I had to change the reminders#new and home views, as well as reminderModel and tests. This time I did follow the best practice and used migration
           files to accomplish the schema changes.
         </p>
-        <h6>Sending Emails</h6>
-        <p>
+        <h6 class="text-sm font-normal my-2 mt-6">Sending Emails</h6>
+        <p class="mt-2 text-base">
           For sending actual emails, I used <a href="https://www.mailgun.com/" target="_blank" class="custom-link">MailGun</a>, which a developer recommended. Figuring out the <a href="https://github.com/javan/whenever" target="_blank" class="custom-link">whenever gem</a>
           took some time. I started by creating an automated function, deleting a reminder with a specific title, every two minutes. When that worked, I started sending a welcome email. However, this interfered with my specs for user, reminder and signup, because MailerGun
           only allows you to use the sandbox for testing purposes. For this reason, it is now commented out.
@@ -67,29 +68,29 @@
           </pre>
           In the next if-statement, the dates and times of the reminder and today were compared and if they were the same, the email would be sent.
         </p>
-      <h6>Next Steps</h6>
-      <p>
-        <li>
-          Iterating over all the reminder tables is not the most efficient way. Applying a filter with the .where method (date) and then comparing times with right now could improve efficiency.
-        </li>
-        <li>
-          Checking every minute if a reminder should be sent is not very efficient. As an option the time to pick for the reminder could be limited to 5-minute intervals.
-        </li>
-        <li>
-          Using a CI pipeline, this topic interest me and I am learning about it more.
-        </li>
-        <li>
-          For now I only checked manually, if mailing works, especially for edge cases such as the reminder date being the 31st and the month not having 31 days.
-        </li>
-        <li>
-          Letting the user pick a time zone, when creating a new reminder.
-        </li>
-        <li>Let the user edit a reminder.</li>
-        <li>Work on the front-end.</li>
-      </p>
-    </li>
-      <h6>Lessons learned</h6>
-      <p>
+        <h6 class="text-sm font-normal my-2 mt-6">Next Steps</h6>
+        <p class="mt-2 text-base">
+          <li>
+            Iterating over all the reminder tables is not the most efficient way. Applying a filter with the .where method (date) and then comparing times with right now could improve efficiency.
+          </li>
+          <li>
+            Checking every minute if a reminder should be sent is not very efficient. As an option the time to pick for the reminder could be limited to 5-minute intervals.
+          </li>
+          <li>
+            Using a CI pipeline, this topic interest me and I am learning about it more.
+          </li>
+          <li>
+            For now I only checked manually, if mailing works, especially for edge cases such as the reminder date being the 31st and the month not having 31 days.
+          </li>
+          <li>
+            Letting the user pick a time zone, when creating a new reminder.
+          </li>
+          <li>Let the user edit a reminder.</li>
+          <li>Work on the front-end.</li>
+        </p>
+      </li>
+      <h4 class="text-xl font-semibold my-2 mt-6">Lessons learned</h4>
+      <p class="mt-2 text-base">
         <li>
           Be even clearer from the beginning, which gems and helpers I would want to use.
         </li>
@@ -111,24 +112,32 @@
         </li>
       </p>
     </div>
-  </div>
-
-  <div>
-    <ul class="casestudy-directory">
-      <li><a href="casestudy_flashcards.html" class="custom-link">Previous case study</a></li>
-      <li><a href="index.html" class="custom-link">Home</a></li>
-      <li><a href="casestudy_line.html" class="custom-link">Next case study</a></li>
-    </ul>
-  </div>
-
-  <footer class="text-center p-4 mt-8">
-    <div class="flex justify-center space-x-4">
-      <a href="https://github.com/codersquirrelbln/" target="_blank" class="text-gray-700"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank" class="text-blue-700"><i class="fab fa-linkedin"></i></a>
-      <a href="https://gitlab.com/codersquirrel" target="_blank" class="text-orange-500"><i class="fab fa-gitlab"></i></a>
-      <a href="https://twitter.com/codersquirrel1" target="_blank" class="text-blue-400"><i class="fab fa-twitter"></i></a>
+    
+    <div class="mt-4">
+      <ul class="flex list-none p-0">
+        <li class="mx-2">
+          <a href="casestudy_flashcards.html" class="custom-link">Previous case study</a>
+        </li>
+        <li class="mx-2">
+          <a href="index.html" class="custom-link">Home</a>
+        </li>
+        <li class="mx-2">
+          <a href="casestudy_line.html" class="custom-link">Next case study</a>
+        </li>
+      </ul>
     </div>
-    &copy; 2024 Elisa Burghard
-  </footer>
+    
+    <footer class="text-center p-4 mt-8">
+      <div class="flex justify-center space-x-4">
+        <a href="https://github.com/codersquirrelbln/" target="_blank" class="text-gray-700"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank" class="text-blue-700"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://gitlab.com/codersquirrel" target="_blank" class="text-orange-500"><i class="fab fa-gitlab fa-2x"></i></a>
+        <a href="https://twitter.com/codersquirrel1" target="_blank" class="text-blue-400"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
+      <div class="mt-4 text-sm">
+        &copy; 2024 Elisa Burghard
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
