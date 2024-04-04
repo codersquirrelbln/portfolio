@@ -17,10 +17,6 @@ body {
   height: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6, ul{
-  color: #084343;
-}
-
 .card img {
   height: 200px; 
   object-fit: cover;
@@ -35,41 +31,6 @@ p, h1, h2, h3, h4, h5, h6, ul{
   justify-content: space-between; 
 }
 
-.project-info {
-  flex-grow: 1; 
-}
-
-.fa-gitlab {
-  color: orange;
-}
-
-.fa-github {
-  color: black;
-}
-
-.casestudy-directory {
-  display: flex;
-  list-style-type: none; 
-  padding: 0; 
-}
-
-.casestudy-directory li {
-  margin: 0 10px; 
-}
-
-.custom-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: #fff;
-}
-.image-sm {
-  height: 150px;
-}
-
-.code-snippet {
-  background-color: #f4f4f4;
-  padding: 10px;
-  overflow-x: auto;
-  white-space: nowrap;
+p, h1, h2, h3, h4, h5, h6, ul{
+  color: #084343;
 }
