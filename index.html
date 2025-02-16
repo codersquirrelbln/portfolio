@@ -1,37 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-  <div class="container mx-auto px-4 py-8">
-    <div class="text-center mb-20 mt-14">
-      <img class="inline-block rounded-full h-52 w-52 object-cover mx-auto" src="images/elisa_profile_pic.jpg" alt="Profile Picture of Elisa">
-      <h2 class="text-2xl font-bold mt-4">Hi, I am Elisa, a full-stack developer at <a href="https://zaikio.com/" class="custom-link">Zaikio</a> and based in Bozeman, Montana.</h2>
-      <p class="mt-2 text-base">In my free time, you'll find me climbing, solving puzzles or sudoku, reading a crime novel, or learning a new language.</p>
-      <p class="mt-2 text-base">Please feel free to reach out to me any time at <span id="email" class="cursor-pointer underline custom-link">codersquirrelbln@gmail.com</span>!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto px-4 py-8">
+      <div class="text-center mb-5 mt-14">
+        <img
+          class="inline-block rounded-full h-52 w-52 object-cover mx-auto"
+          src="images/elisa_profile_pic.jpg"
+          alt="Profile Picture of Elisa"
+        />
+        <h2 class="text-2xl font-bold mt-4">
+          Hi, I'm Elisa, a full-stack engineer with a focus on Ruby on Rails and
+          JavaScript. <br />
+          From Berlin, now based in Bozeman, Montana.
+        </h2>
+        <p class="mt-2 text-base">
+          In my free time, you'll find me climbing, solving puzzles or sudoku,
+          reading a crime novel, or learning a new language.
+        </p>
+      </div>
+      <div class="flex justify-center items-center space-x-6 mt-2">
+        <a
+          href="mailto:codersquirrelbln@gmail.com"
+          class="text-base flex items-center space-x-2"
+        >
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+
+        <a
+          href="documents/Elisa_Burghard_Resume.pdf"
+          target="_blank"
+          download
+          class="text-base flex items-center space-x-2"
+        >
+          <i class="fas fa-file-alt"></i>
+          <span>Resume</span>
+        </a>
+      </div>
     </div>
 
     <div class="flex flex-wrap -mx-4">
       <div class="w-full md:w-1/2 px-4 mb-8">
         <div class="card bg-white shadow-md rounded-lg overflow-hidden">
-          <img src="images/line.png" alt="Screenshot of the Line Platform">
+          <img src="images/line.png" alt="Screenshot of the Line Platform" />
           <div class="p-4 card-body">
             <div class="project-info">
-              <p class="mt-2 text-base"><strong>Line</strong> facilitates financial contributions to open source projects using web3.</p>
+              <p class="mt-2 text-base">
+                <strong>Line</strong> facilitates financial contributions to
+                open source projects using web3.
+              </p>
               <div class="flex space-x-2 mt-2">
-                <a href="https://github.com/buildwithline/line" target="_blank" class="custom-link">Code</a>
+                <a
+                  href="https://github.com/buildwithline/line"
+                  target="_blank"
+                  class="custom-link"
+                  >Code</a
+                >
                 <a href="casestudy_line.html" class="custom-link">Case Study</a>
-                <a href="https://withline.xyz/" target="_blank" class="custom-link">withline.xyz</a>
+                <a
+                  href="https://withline.xyz/"
+                  target="_blank"
+                  class="custom-link"
+                  >withline.xyz</a
+                >
               </div>
             </div>
           </div>
@@ -40,13 +92,32 @@
 
       <div class="w-full md:w-1/2 px-4 mb-8">
         <div class="card bg-white shadow-md rounded-lg overflow-hidden">
-          <img class="w-full" src="images/visa_calculator_landing.png" alt="Screenshot of the Visa Calculator">
+          <img
+            class="w-full"
+            src="images/visa_calculator_landing.png"
+            alt="Screenshot of the Visa Calculator"
+          />
           <div class="p-4 card-body">
-            <p class="mt-2 text-base"><strong>Visa Calculator</strong> helps travelers comply with visa regulations.</p>
+            <p class="mt-2 text-base">
+              <strong>Visa Calculator</strong> helps travelers comply with visa
+              regulations.
+            </p>
             <div class="flex space-x-2 mt-2">
-              <a href="https://github.com/codersquirrelbln/visa_calculator" target="_blank" class="custom-link">Code</a>
-              <a href="casestudy_calculator.html" class="custom-link">Case Study</a>
-              <a href="https://codersquirrelbln.github.io/visa_calculator/" target="_blank" class="custom-link">Go to Project</a>
+              <a
+                href="https://github.com/codersquirrelbln/visa_calculator"
+                target="_blank"
+                class="custom-link"
+                >Code</a
+              >
+              <a href="casestudy_calculator.html" class="custom-link"
+                >Case Study</a
+              >
+              <a
+                href="https://codersquirrelbln.github.io/visa_calculator/"
+                target="_blank"
+                class="custom-link"
+                >Go to Project</a
+              >
             </div>
           </div>
         </div>
@@ -55,18 +126,39 @@
 
     <footer class="text-center p-4 mt-8">
       <div class="flex justify-center space-x-4">
-        <a href="https://github.com/codersquirrelbln/" target="_blank" class="text-gray-700"><i class="fab fa-github"></i></a>
-        <a href="https://gitlab.com/codersquirrel" target="_blank" class="text-orange-500" style="color: orange"><i class="fab fa-gitlab fa-1x"></i></a>
-        <a href="https://www.linkedin.com/in/elisaburghard/" target="_blank" class="text-blue-700"><i class="fab fa-linkedin"></i></a>
+        <a
+          href="https://github.com/codersquirrelbln/"
+          target="_blank"
+          class="text-gray-700"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://gitlab.com/codersquirrel"
+          target="_blank"
+          class="text-orange-500"
+          style="color: orange"
+          ><i class="fab fa-gitlab fa-1x"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/elisaburghard/"
+          target="_blank"
+          class="text-blue-700"
+          ><i class="fab fa-linkedin"></i
+        ></a>
       </div>
     </footer>
 
     <script>
-        document.getElementById('email').addEventListener('click', function(event) {
-            navigator.clipboard.writeText('codersquirrelbln@gmail.com')
-                .then(() => alert('Email address copied to clipboard!'))
-                .catch(err => console.error('Error copying email to clipboard: ', err));
+      document
+        .getElementById("email")
+        .addEventListener("click", function (event) {
+          navigator.clipboard
+            .writeText("codersquirrelbln@gmail.com")
+            .then(() => alert("Email address copied to clipboard!"))
+            .catch((err) =>
+              console.error("Error copying email to clipboard: ", err)
+            );
         });
     </script>
-</body>
+  </body>
 </html>
